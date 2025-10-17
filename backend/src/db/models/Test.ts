@@ -6,6 +6,14 @@ export interface IQuestion {
   options: string[];
   correctAnswer: string;
   difficulty: 'easy' | 'medium' | 'hard';
+  // New fields for advanced question generation
+  questionId?: string; // New format uses questionId
+  topic?: string;
+  difficultyLevel?: number; // 1-5 scale (new format)
+  bloomLevel?: 'Remember' | 'Understand' | 'Apply' | 'Analyze' | 'Evaluate' | 'Create';
+  type?: 'MCQ' | 'TrueFalse' | 'ShortAnswer' | 'ProblemSolving';
+  questionText?: string; // New format uses questionText instead of text
+  explanation?: string;
 }
 
 export interface ITest extends Document {

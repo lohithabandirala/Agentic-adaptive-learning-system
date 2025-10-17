@@ -1,10 +1,28 @@
 import { Router } from 'express';
 import { getNextDifficulty, Difficulty } from '../adaptiveLogic';
 import geminiClient from '../services/geminiClient';
+import advancedGenerator from '../services/advancedQuestionGenerator';
 import { Test, Attempt, Class } from '../db/models';
 import { authenticateToken, requireTeacher, AuthRequest } from '../middleware/auth';
 
 const router = Router();
+
+// Helper: Convert old difficulty string to 1-5 scale
+function difficultyToLevel(diff: string): number {
+  switch (diff.toLowerCase()) {
+    case 'easy': return 2;
+    case 'medium': return 3;
+    case 'hard': return 4;
+    default: return 3;
+  }
+}
+
+// Helper: Convert 1-5 scale to old difficulty string
+function levelToDifficulty(level: number): 'easy' | 'medium' | 'hard' {
+  if (level <= 2) return 'easy';
+  if (level >= 4) return 'hard';
+  return 'medium';
+}
 
 // Teacher creates a test template (NO question generation yet)
 router.post('/create', authenticateToken, requireTeacher, async (req: AuthRequest, res) => {
@@ -125,19 +143,54 @@ router.post('/start', authenticateToken, async (req: AuthRequest, res) => {
     console.log(`🎯 Student ${req.user!.username} started test: ${test.testName}`);
     console.log(`   Generating first question (difficulty: easy)...`);
     
-    // Generate FIRST question with EASY difficulty
-    const prompt = `Generate exactly 1 EASY difficulty multiple-choice question about: "${test.topic}". 
+    // Generate FIRST question with EASY difficulty using Advanced AI
+    const result = await advancedGenerator.generateQuestions({
+      topic: test.topic,
+      questionCount: 1,
+      studentData: {
+        studentId,
+        knowledgeLevel: 2, // Start easy (level 2 out of 5)
+      }
+    });
+    
+    if (!result.success || !result.data || result.data.length === 0) {
+      // Fallback to legacy generator
+      console.log('⚠️ Advanced generator failed, using legacy...');
+      const fallbackPrompt = `Generate exactly 1 EASY difficulty multiple-choice question about: "${test.topic}". 
 Return as JSON array with format: [{"id":"q1","text":"question text","difficulty":"easy","options":["A","B","C","D"],"correctAnswer":"A"}]`;
-    
-    const result = await geminiClient.generateQuestions(prompt);
-    
-    if (!result.questions || result.questions.length === 0) {
-      return res.status(500).json({ error: 'Failed to generate first question' });
+      const legacyResult = await geminiClient.generateQuestions(fallbackPrompt);
+      
+      if (!legacyResult.questions || legacyResult.questions.length === 0) {
+        return res.status(500).json({ error: 'Failed to generate first question' });
+      }
+      
+      const question = legacyResult.questions[0];
+      console.log(`✅ First question generated (legacy): ${question.text.substring(0, 50)}...`);
+      
+      return res.json({ 
+        attemptId,
+        question,
+        questionNumber: 1,
+        totalQuestions: test.numQuestions
+      });
     }
     
-    const question = result.questions[0];
+    // Convert advanced format to legacy format for frontend compatibility
+    const advancedQ = result.data[0];
+    const question = {
+      id: advancedQ.questionId,
+      text: advancedQ.questionText,
+      difficulty: levelToDifficulty(advancedQ.difficulty),
+      options: advancedQ.options || [],
+      correctAnswer: advancedQ.correctAnswer,
+      // Include advanced fields for future use
+      bloomLevel: advancedQ.bloomLevel,
+      type: advancedQ.type,
+      explanation: advancedQ.explanation,
+    };
     
-    console.log(`✅ First question generated: ${question.text.substring(0, 50)}...`);
+    console.log(`✅ First question generated (advanced): ${question.text.substring(0, 50)}...`);
+    console.log(`   Bloom Level: ${advancedQ.bloomLevel}, Difficulty: ${advancedQ.difficulty}/5`);
     
     res.json({ 
       attemptId,
@@ -219,23 +272,75 @@ router.post('/answer', authenticateToken, async (req: AuthRequest, res) => {
 
     await attempt.save();
 
-    // Generate NEXT question with adaptive difficulty
+    // Generate NEXT question with adaptive difficulty using Advanced AI
     console.log(`🤖 Generating question ${attempt.index + 1}/${test.numQuestions} (difficulty: ${nextDifficulty})...`);
     
-    const difficultyText = nextDifficulty.toUpperCase();
-    const prompt = `Generate exactly 1 ${difficultyText} difficulty multiple-choice question about: "${test.topic}". 
+    const targetLevel = difficultyToLevel(nextDifficulty);
+    
+    // Calculate student performance metrics
+    const recentScores = attempt.results.slice(-5).map(r => r.isCorrect ? 100 : 0);
+    const avgScore = recentScores.length > 0 
+      ? recentScores.reduce((a: number, b: number) => a + b, 0) / recentScores.length 
+      : 50;
+    
+    const result = await advancedGenerator.generateQuestions({
+      topic: test.topic,
+      questionCount: 1,
+      studentData: {
+        studentId: attempt.studentId,
+        knowledgeLevel: targetLevel,
+        previousPerformance: {
+          averageScore: avgScore,
+          recentScores,
+        },
+        emotionalState: {
+          stressLevel: stress > 7 ? 'high' : stress > 4 ? 'medium' : 'low',
+        }
+      }
+    });
+    
+    if (!result.success || !result.data || result.data.length === 0) {
+      // Fallback to legacy generator
+      console.log('⚠️ Advanced generator failed, using legacy...');
+      const difficultyText = nextDifficulty.toUpperCase();
+      const fallbackPrompt = `Generate exactly 1 ${difficultyText} difficulty multiple-choice question about: "${test.topic}". 
 The question should be ${nextDifficulty} level. 
 Return as JSON array with format: [{"id":"q${attempt.index + 1}","text":"question text","difficulty":"${nextDifficulty}","options":["A","B","C","D"],"correctAnswer":"A"}]`;
-    
-    const result = await geminiClient.generateQuestions(prompt);
-    
-    if (!result.questions || result.questions.length === 0) {
-      return res.status(500).json({ error: 'Failed to generate next question' });
+      
+      const legacyResult = await geminiClient.generateQuestions(fallbackPrompt);
+      
+      if (!legacyResult.questions || legacyResult.questions.length === 0) {
+        return res.status(500).json({ error: 'Failed to generate next question' });
+      }
+      
+      const nextQuestion = legacyResult.questions[0];
+      console.log(`✅ Question generated (legacy): ${nextQuestion.text.substring(0, 50)}...`);
+      
+      return res.json({ 
+        nextDifficulty, 
+        question: nextQuestion, 
+        done: false,
+        questionNumber: attempt.index + 1,
+        totalQuestions: test.numQuestions,
+      });
     }
     
-    const nextQuestion = result.questions[0];
+    // Convert advanced format to legacy format
+    const advancedQ = result.data[0];
+    const nextQuestion = {
+      id: advancedQ.questionId,
+      text: advancedQ.questionText,
+      difficulty: levelToDifficulty(advancedQ.difficulty),
+      options: advancedQ.options || [],
+      correctAnswer: advancedQ.correctAnswer,
+      // Include advanced fields
+      bloomLevel: advancedQ.bloomLevel,
+      type: advancedQ.type,
+      explanation: advancedQ.explanation,
+    };
     
-    console.log(`✅ Question generated: ${nextQuestion.text.substring(0, 50)}... (difficulty: ${nextQuestion.difficulty})`);
+    console.log(`✅ Question generated (advanced): ${nextQuestion.text.substring(0, 50)}...`);
+    console.log(`   Bloom Level: ${advancedQ.bloomLevel}, Difficulty: ${advancedQ.difficulty}/5`);
     
     res.json({ 
       nextDifficulty, 
