@@ -1,0 +1,1067 @@
+{
+  "emotionData": {
+    "analysis_duration_seconds": 20.56,
+    "total_frames_analyzed": 69,
+    "start_time": "2025-10-17T16:26:20.051261",
+    "end_time": "2025-10-17T16:26:37.250207",
+    "overall_dominant_emotion": "happy",
+    "dominant_emotion_percentages": {
+      "happy": 46.38,
+      "neutral": 40.58,
+      "angry": 11.59,
+      "sad": 1.45
+    },
+    "average_emotion_scores": {
+      "happy": 39.83,
+      "neutral": 37.22,
+      "angry": 16.38,
+      "sad": 6.38,
+      "fear": 0.18,
+      "surprise": 0.02,
+      "disgust": 0.0
+    },
+    "stress_level": 1,
+    "detailed_timeline": [
+      {
+        "timestamp": "2025-10-17T16:26:20.051261",
+        "elapsed_seconds": 2.23,
+        "dominant_emotion": "angry",
+        "emotion_scores": {
+          "angry": 59.65230941772461,
+          "disgust": 8.679516759002581e-05,
+          "fear": 0.12778566777706146,
+          "happy": 21.612260818481445,
+          "sad": 2.255736827850342,
+          "surprise": 0.006083231419324875,
+          "neutral": 16.345733642578125
+        }
+      },
+      {
+        "timestamp": "2025-10-17T16:26:20.502556",
+        "elapsed_seconds": 3.33,
+        "dominant_emotion": "neutral",
+        "emotion_scores": {
+          "angry": 8.489328384399414,
+          "disgust": 0.0002843545807991177,
+          "fear": 0.42426252365112305,
+          "happy": 19.681171417236328,
+          "sad": 7.070549964904785,
+          "surprise": 0.06930539757013321,
+          "neutral": 64.26510620117188
+        }
+      },
+      {
+        "timestamp": "2025-10-17T16:26:20.819777",
+        "elapsed_seconds": 3.65,
+        "dominant_emotion": "neutral",
+        "emotion_scores": {
+          "angry": 8.871612548828125,
+          "disgust": 0.00031697508529759943,
+          "fear": 1.088297724723816,
+          "happy": 2.143855571746826,
+          "sad": 9.266736030578613,
+          "surprise": 0.020369477570056915,
+          "neutral": 78.60881805419922
+        }
+      },
+      {
+        "timestamp": "2025-10-17T16:26:21.076754",
+        "elapsed_seconds": 3.93,
+        "dominant_emotion": "neutral",
+        "emotion_scores": {
+          "angry": 10.14148235321045,
+          "disgust": 7.565803389297798e-05,
+          "fear": 0.2909526228904724,
+          "happy": 0.975992739200592,
+          "sad": 7.78046178817749,
+          "surprise": 0.004580047447234392,
+          "neutral": 80.80645751953125
+        }
+      },
+      {
+        "timestamp": "2025-10-17T16:26:21.344850",
+        "elapsed_seconds": 4.19,
+        "dominant_emotion": "neutral",
+        "emotion_scores": {
+          "angry": 16.20697021484375,
+          "disgust": 0.0004415722796693444,
+          "fear": 0.9743859767913818,
+          "happy": 10.5113525390625,
+          "sad": 13.81800365447998,
+          "surprise": 0.03693969175219536,
+          "neutral": 58.451904296875
+        }
+      },
+      {
+        "timestamp": "2025-10-17T16:26:21.563551",
+        "elapsed_seconds": 4.39,
+        "dominant_emotion": "neutral",
+        "emotion_scores": {
+          "angry": 9.656778335571289,
+          "disgust": 0.00040494397399015725,
+          "fear": 1.697463035583496,
+          "happy": 3.262937068939209,
+          "sad": 19.857709884643555,
+          "surprise": 0.021043572574853897,
+          "neutral": 65.503662109375
+        }
+      },
+      {
+        "timestamp": "2025-10-17T16:26:21.781094",
+        "elapsed_seconds": 4.67,
+        "dominant_emotion": "neutral",
+        "emotion_scores": {
+          "angry": 4.992410182952881,
+          "disgust": 8.734394941711798e-05,
+          "fear": 0.773373007774353,
+          "happy": 1.303640365600586,
+          "sad": 9.823586463928223,
+          "surprise": 0.01770033687353134,
+          "neutral": 83.08920288085938
+        }
+      },
+      {
+        "timestamp": "2025-10-17T16:26:22.102815",
+        "elapsed_seconds": 4.93,
+        "dominant_emotion": "neutral",
+        "emotion_scores": {
+          "angry": 5.736629009246826,
+          "disgust": 0.00018952757818624377,
+          "fear": 0.5407236814498901,
+          "happy": 0.8392322063446045,
+          "sad": 4.042942523956299,
+          "surprise": 0.07559837400913239,
+          "neutral": 88.76468658447266
+        }
+      },
+      {
+        "timestamp": "2025-10-17T16:26:22.490139",
+        "elapsed_seconds": 5.18,
+        "dominant_emotion": "neutral",
+        "emotion_scores": {
+          "angry": 4.759498119354248,
+          "disgust": 1.7136550013674423e-05,
+          "fear": 0.4558584690093994,
+          "happy": 1.4148650169372559,
+          "sad": 3.055032968521118,
+          "surprise": 0.061676762998104095,
+          "neutral": 90.2530517578125
+        }
+      },
+      {
+        "timestamp": "2025-10-17T16:26:22.829879",
+        "elapsed_seconds": 5.63,
+        "dominant_emotion": "angry",
+        "emotion_scores": {
+          "angry": 53.052181243896484,
+          "disgust": 1.625789445824921e-05,
+          "fear": 0.050317320972681046,
+          "happy": 13.182893753051758,
+          "sad": 2.7925782203674316,
+          "surprise": 0.008051515556871891,
+          "neutral": 30.91396713256836
+        }
+      },
+      {
+        "timestamp": "2025-10-17T16:26:23.098099",
+        "elapsed_seconds": 5.96,
+        "dominant_emotion": "angry",
+        "emotion_scores": {
+          "angry": 57.64826965332031,
+          "disgust": 1.4928340306141763e-06,
+          "fear": 0.04551908001303673,
+          "happy": 5.864593029022217,
+          "sad": 2.3592066764831543,
+          "surprise": 0.0006054327823221684,
+          "neutral": 34.081809997558594
+        }
+      },
+      {
+        "timestamp": "2025-10-17T16:26:23.290013",
+        "elapsed_seconds": 6.15,
+        "dominant_emotion": "neutral",
+        "emotion_scores": {
+          "angry": 37.35050582885742,
+          "disgust": 5.170992608327651e-06,
+          "fear": 0.07546868920326233,
+          "happy": 2.9111835956573486,
+          "sad": 4.523012161254883,
+          "surprise": 0.0007615421200171113,
+          "neutral": 55.13906478881836
+        }
+      },
+      {
+        "timestamp": "2025-10-17T16:26:23.494934",
+        "elapsed_seconds": 6.33,
+        "dominant_emotion": "neutral",
+        "emotion_scores": {
+          "angry": 25.47042465209961,
+          "disgust": 7.704778148820424e-09,
+          "fear": 0.010887189768254757,
+          "happy": 6.826719760894775,
+          "sad": 0.6186195015907288,
+          "surprise": 8.363554661627859e-05,
+          "neutral": 67.0732650756836
+        }
+      },
+      {
+        "timestamp": "2025-10-17T16:26:23.696209",
+        "elapsed_seconds": 6.54,
+        "dominant_emotion": "angry",
+        "emotion_scores": {
+          "angry": 71.69712829589844,
+          "disgust": 1.02297667581297e-06,
+          "fear": 0.0668616071343422,
+          "happy": 1.1281487941741943,
+          "sad": 1.9094563722610474,
+          "surprise": 0.000467114761704579,
+          "neutral": 25.197935104370117
+        }
+      },
+      {
+        "timestamp": "2025-10-17T16:26:23.953823",
+        "elapsed_seconds": 6.84,
+        "dominant_emotion": "neutral",
+        "emotion_scores": {
+          "angry": 34.53307342529297,
+          "disgust": 2.020812672753891e-07,
+          "fear": 0.0008857549983076751,
+          "happy": 1.9797756671905518,
+          "sad": 0.7046980261802673,
+          "surprise": 0.00017825953545980155,
+          "neutral": 62.78138732910156
+        }
+      },
+      {
+        "timestamp": "2025-10-17T16:26:24.185526",
+        "elapsed_seconds": 7.03,
+        "dominant_emotion": "angry",
+        "emotion_scores": {
+          "angry": 59.70833206176758,
+          "disgust": 3.085575144723407e-06,
+          "fear": 0.011357901617884636,
+          "happy": 4.934396743774414,
+          "sad": 1.353865385055542,
+          "surprise": 0.0011197846615687013,
+          "neutral": 33.99092102050781
+        }
+      },
+      {
+        "timestamp": "2025-10-17T16:26:24.472072",
+        "elapsed_seconds": 7.33,
+        "dominant_emotion": "angry",
+        "emotion_scores": {
+          "angry": 67.28077697753906,
+          "disgust": 5.723275535274297e-05,
+          "fear": 0.25224483013153076,
+          "happy": 14.737953186035156,
+          "sad": 1.9756625890731812,
+          "surprise": 0.012744265608489513,
+          "neutral": 15.740550994873047
+        }
+      },
+      {
+        "timestamp": "2025-10-17T16:26:24.707980",
+        "elapsed_seconds": 7.53,
+        "dominant_emotion": "happy",
+        "emotion_scores": {
+          "angry": 10.19017505645752,
+          "disgust": 2.9851155431970255e-06,
+          "fear": 0.015140257775783539,
+          "happy": 61.75935745239258,
+          "sad": 0.5294002890586853,
+          "surprise": 0.008778811432421207,
+          "neutral": 27.497142791748047
+        }
+      },
+      {
+        "timestamp": "2025-10-17T16:26:24.901699",
+        "elapsed_seconds": 7.8,
+        "dominant_emotion": "happy",
+        "emotion_scores": {
+          "angry": 17.29900550842285,
+          "disgust": 1.7376432026594557e-07,
+          "fear": 0.007782419677823782,
+          "happy": 42.0692138671875,
+          "sad": 0.36714980006217957,
+          "surprise": 0.001993900630623102,
+          "neutral": 40.25484848022461
+        }
+      },
+      {
+        "timestamp": "2025-10-17T16:26:25.165702",
+        "elapsed_seconds": 8.03,
+        "dominant_emotion": "angry",
+        "emotion_scores": {
+          "angry": 44.051177978515625,
+          "disgust": 2.5683107196528e-07,
+          "fear": 0.004401786718517542,
+          "happy": 33.04042434692383,
+          "sad": 0.7245314121246338,
+          "surprise": 0.00039364505209960043,
+          "neutral": 22.179075241088867
+        }
+      },
+      {
+        "timestamp": "2025-10-17T16:26:25.362827",
+        "elapsed_seconds": 8.24,
+        "dominant_emotion": "happy",
+        "emotion_scores": {
+          "angry": 35.300025939941406,
+          "disgust": 7.063119369377091e-07,
+          "fear": 0.006243593990802765,
+          "happy": 40.684452056884766,
+          "sad": 0.5013348460197449,
+          "surprise": 0.0018223692895844579,
+          "neutral": 23.506120681762695
+        }
+      },
+      {
+        "timestamp": "2025-10-17T16:26:25.576863",
+        "elapsed_seconds": 8.48,
+        "dominant_emotion": "happy",
+        "emotion_scores": {
+          "angry": 21.77159309387207,
+          "disgust": 2.4166340040210343e-08,
+          "fear": 0.0029268485959619284,
+          "happy": 40.138465881347656,
+          "sad": 0.28625980019569397,
+          "surprise": 0.0003099937457591295,
+          "neutral": 37.800445556640625
+        }
+      },
+      {
+        "timestamp": "2025-10-17T16:26:25.874094",
+        "elapsed_seconds": 8.77,
+        "dominant_emotion": "neutral",
+        "emotion_scores": {
+          "angry": 34.84234619140625,
+          "disgust": 1.8988927763530228e-07,
+          "fear": 0.002647548681125045,
+          "happy": 9.507923126220703,
+          "sad": 1.1105294227600098,
+          "surprise": 0.00016265273734461516,
+          "neutral": 54.53638458251953
+        }
+      },
+      {
+        "timestamp": "2025-10-17T16:26:26.073487",
+        "elapsed_seconds": 8.95,
+        "dominant_emotion": "neutral",
+        "emotion_scores": {
+          "angry": 13.368995666503906,
+          "disgust": 1.1321257261442952e-05,
+          "fear": 0.012986874207854271,
+          "happy": 19.956735610961914,
+          "sad": 2.4442999362945557,
+          "surprise": 0.0030700762290507555,
+          "neutral": 64.21390533447266
+        }
+      },
+      {
+        "timestamp": "2025-10-17T16:26:26.338328",
+        "elapsed_seconds": 9.22,
+        "dominant_emotion": "angry",
+        "emotion_scores": {
+          "angry": 54.407615661621094,
+          "disgust": 1.2337871339695994e-05,
+          "fear": 0.03820585831999779,
+          "happy": 5.388417720794678,
+          "sad": 2.542501211166382,
+          "surprise": 0.0012865611352026463,
+          "neutral": 37.62195587158203
+        }
+      },
+      {
+        "timestamp": "2025-10-17T16:26:26.564290",
+        "elapsed_seconds": 9.41,
+        "dominant_emotion": "neutral",
+        "emotion_scores": {
+          "angry": 16.179325103759766,
+          "disgust": 1.3656471310241614e-05,
+          "fear": 0.03961795195937157,
+          "happy": 19.978187561035156,
+          "sad": 5.505702495574951,
+          "surprise": 0.0023335402365773916,
+          "neutral": 58.29482650756836
+        }
+      },
+      {
+        "timestamp": "2025-10-17T16:26:26.862880",
+        "elapsed_seconds": 9.71,
+        "dominant_emotion": "neutral",
+        "emotion_scores": {
+          "angry": 22.249570846557617,
+          "disgust": 1.8983870177180506e-05,
+          "fear": 0.05214782431721687,
+          "happy": 18.810997009277344,
+          "sad": 4.16500997543335,
+          "surprise": 0.0040321373380720615,
+          "neutral": 54.71822738647461
+        }
+      },
+      {
+        "timestamp": "2025-10-17T16:26:27.079984",
+        "elapsed_seconds": 9.91,
+        "dominant_emotion": "neutral",
+        "emotion_scores": {
+          "angry": 21.048723220825195,
+          "disgust": 0.00048325606621801853,
+          "fear": 0.6650357246398926,
+          "happy": 19.72117042541504,
+          "sad": 4.428924560546875,
+          "surprise": 0.12251503020524979,
+          "neutral": 54.013145446777344
+        }
+      },
+      {
+        "timestamp": "2025-10-17T16:26:27.273258",
+        "elapsed_seconds": 10.19,
+        "dominant_emotion": "neutral",
+        "emotion_scores": {
+          "angry": 28.970623016357422,
+          "disgust": 0.00025160241057164967,
+          "fear": 0.25545090436935425,
+          "happy": 6.13508415222168,
+          "sad": 12.327791213989258,
+          "surprise": 0.003136405721306801,
+          "neutral": 52.30766677856445
+        }
+      },
+      {
+        "timestamp": "2025-10-17T16:26:27.542369",
+        "elapsed_seconds": 10.44,
+        "dominant_emotion": "neutral",
+        "emotion_scores": {
+          "angry": 15.321927070617676,
+          "disgust": 3.556385127012618e-05,
+          "fear": 0.08177845180034637,
+          "happy": 2.2788751125335693,
+          "sad": 6.654377460479736,
+          "surprise": 0.000824078219011426,
+          "neutral": 75.66218566894531
+        }
+      },
+      {
+        "timestamp": "2025-10-17T16:26:27.791886",
+        "elapsed_seconds": 10.66,
+        "dominant_emotion": "happy",
+        "emotion_scores": {
+          "angry": 31.041290283203125,
+          "disgust": 4.382141923997551e-05,
+          "fear": 0.05942621827125549,
+          "happy": 46.96504211425781,
+          "sad": 4.522745132446289,
+          "surprise": 0.015768492594361305,
+          "neutral": 17.39567756652832
+        }
+      },
+      {
+        "timestamp": "2025-10-17T16:26:28.038584",
+        "elapsed_seconds": 10.92,
+        "dominant_emotion": "neutral",
+        "emotion_scores": {
+          "angry": 25.476905822753906,
+          "disgust": 0.0007715139072388411,
+          "fear": 0.5357023477554321,
+          "happy": 3.419574737548828,
+          "sad": 9.812591552734375,
+          "surprise": 0.01742447167634964,
+          "neutral": 60.73702621459961
+        }
+      },
+      {
+        "timestamp": "2025-10-17T16:26:28.267055",
+        "elapsed_seconds": 11.1,
+        "dominant_emotion": "neutral",
+        "emotion_scores": {
+          "angry": 6.763662338256836,
+          "disgust": 7.239041588036343e-05,
+          "fear": 0.2259792536497116,
+          "happy": 4.916166305541992,
+          "sad": 13.036974906921387,
+          "surprise": 0.0030013914220035076,
+          "neutral": 75.05414581298828
+        }
+      },
+      {
+        "timestamp": "2025-10-17T16:26:28.552926",
+        "elapsed_seconds": 11.37,
+        "dominant_emotion": "neutral",
+        "emotion_scores": {
+          "angry": 15.217805862426758,
+          "disgust": 0.0007632211199961603,
+          "fear": 0.32923224568367004,
+          "happy": 13.664283752441406,
+          "sad": 24.377464294433594,
+          "surprise": 0.002412344329059124,
+          "neutral": 46.40803146362305
+        }
+      },
+      {
+        "timestamp": "2025-10-17T16:26:28.833159",
+        "elapsed_seconds": 11.72,
+        "dominant_emotion": "neutral",
+        "emotion_scores": {
+          "angry": 7.245951175689697,
+          "disgust": 0.0004281770088709891,
+          "fear": 0.14097264409065247,
+          "happy": 8.199233055114746,
+          "sad": 15.784974098205566,
+          "surprise": 0.0024146903306245804,
+          "neutral": 68.62603759765625
+        }
+      },
+      {
+        "timestamp": "2025-10-17T16:26:29.181971",
+        "elapsed_seconds": 12.05,
+        "dominant_emotion": "neutral",
+        "emotion_scores": {
+          "angry": 37.59519577026367,
+          "disgust": 2.0960722395102493e-05,
+          "fear": 0.033809319138526917,
+          "happy": 15.099191665649414,
+          "sad": 8.447027206420898,
+          "surprise": 0.0009229182032868266,
+          "neutral": 38.82382583618164
+        }
+      },
+      {
+        "timestamp": "2025-10-17T16:26:29.406768",
+        "elapsed_seconds": 12.24,
+        "dominant_emotion": "happy",
+        "emotion_scores": {
+          "angry": 4.8235297203063965,
+          "disgust": 5.1148090278729796e-05,
+          "fear": 0.007168879732489586,
+          "happy": 62.37651443481445,
+          "sad": 3.16262149810791,
+          "surprise": 0.001032117404974997,
+          "neutral": 29.629087448120117
+        }
+      },
+      {
+        "timestamp": "2025-10-17T16:26:29.619684",
+        "elapsed_seconds": 12.46,
+        "dominant_emotion": "happy",
+        "emotion_scores": {
+          "angry": 1.546358346939087,
+          "disgust": 6.607874070141406e-07,
+          "fear": 0.002284010173752904,
+          "happy": 82.13774108886719,
+          "sad": 0.4997003674507141,
+          "surprise": 0.00012438578414730728,
+          "neutral": 15.813797950744629
+        }
+      },
+      {
+        "timestamp": "2025-10-17T16:26:29.850665",
+        "elapsed_seconds": 12.75,
+        "dominant_emotion": "happy",
+        "emotion_scores": {
+          "angry": 0.6367979049682617,
+          "disgust": 1.8203243712378026e-07,
+          "fear": 0.0006971328984946012,
+          "happy": 89.45830535888672,
+          "sad": 0.2554166913032532,
+          "surprise": 5.008354128221981e-05,
+          "neutral": 9.648731231689453
+        }
+      },
+      {
+        "timestamp": "2025-10-17T16:26:30.104087",
+        "elapsed_seconds": 12.98,
+        "dominant_emotion": "neutral",
+        "emotion_scores": {
+          "angry": 18.016464233398438,
+          "disgust": 8.005625204532407e-06,
+          "fear": 0.02395538240671158,
+          "happy": 14.56302261352539,
+          "sad": 6.2918291091918945,
+          "surprise": 0.00048666269867680967,
+          "neutral": 61.10423278808594
+        }
+      },
+      {
+        "timestamp": "2025-10-17T16:26:30.312873",
+        "elapsed_seconds": 13.17,
+        "dominant_emotion": "happy",
+        "emotion_scores": {
+          "angry": 1.5760778188705444,
+          "disgust": 8.725049701752141e-05,
+          "fear": 0.03476586565375328,
+          "happy": 92.14444732666016,
+          "sad": 1.5027062892913818,
+          "surprise": 0.01744244061410427,
+          "neutral": 4.724475383758545
+        }
+      },
+      {
+        "timestamp": "2025-10-17T16:26:30.531610",
+        "elapsed_seconds": 13.36,
+        "dominant_emotion": "happy",
+        "emotion_scores": {
+          "angry": 1.910555362701416,
+          "disgust": 6.166499133541947e-07,
+          "fear": 0.0104074627161026,
+          "happy": 80.50306701660156,
+          "sad": 0.6514135003089905,
+          "surprise": 0.005974867381155491,
+          "neutral": 16.918582916259766
+        }
+      },
+      {
+        "timestamp": "2025-10-17T16:26:30.740358",
+        "elapsed_seconds": 13.57,
+        "dominant_emotion": "happy",
+        "emotion_scores": {
+          "angry": 0.12135344743728638,
+          "disgust": 2.0422257662744414e-08,
+          "fear": 4.828318560612388e-05,
+          "happy": 93.7321548461914,
+          "sad": 0.1627093255519867,
+          "surprise": 0.0002974403614643961,
+          "neutral": 5.983435153961182
+        }
+      },
+      {
+        "timestamp": "2025-10-17T16:26:31.026263",
+        "elapsed_seconds": 13.85,
+        "dominant_emotion": "happy",
+        "emotion_scores": {
+          "angry": 0.39715880155563354,
+          "disgust": 2.0643689424559852e-08,
+          "fear": 5.4259544413071126e-05,
+          "happy": 94.23265075683594,
+          "sad": 0.15197154879570007,
+          "surprise": 0.00015970200183801353,
+          "neutral": 5.218005180358887
+        }
+      },
+      {
+        "timestamp": "2025-10-17T16:26:31.250523",
+        "elapsed_seconds": 14.14,
+        "dominant_emotion": "happy",
+        "emotion_scores": {
+          "angry": 0.001929134363308549,
+          "disgust": 1.0212730217062926e-08,
+          "fear": 7.962210474943276e-06,
+          "happy": 97.02281188964844,
+          "sad": 0.005827586632221937,
+          "surprise": 7.329387153731659e-05,
+          "neutral": 2.9693543910980225
+        }
+      },
+      {
+        "timestamp": "2025-10-17T16:26:31.559163",
+        "elapsed_seconds": 14.36,
+        "dominant_emotion": "happy",
+        "emotion_scores": {
+          "angry": 0.007395539432764053,
+          "disgust": 1.7688099873680585e-08,
+          "fear": 5.8289399021305144e-05,
+          "happy": 98.84734344482422,
+          "sad": 0.0017330064438283443,
+          "surprise": 0.0001795438292901963,
+          "neutral": 1.1432790756225586
+        }
+      },
+      {
+        "timestamp": "2025-10-17T16:26:31.785442",
+        "elapsed_seconds": 14.61,
+        "dominant_emotion": "happy",
+        "emotion_scores": {
+          "angry": 0.0024735513143241405,
+          "disgust": 5.747954787693743e-07,
+          "fear": 7.259201538545312e-06,
+          "happy": 95.5238037109375,
+          "sad": 0.02305620163679123,
+          "surprise": 6.601990025956184e-05,
+          "neutral": 4.45060396194458
+        }
+      },
+      {
+        "timestamp": "2025-10-17T16:26:32.029923",
+        "elapsed_seconds": 14.94,
+        "dominant_emotion": "happy",
+        "emotion_scores": {
+          "angry": 0.07227843999862671,
+          "disgust": 1.6700878404662944e-05,
+          "fear": 0.0003742467670235783,
+          "happy": 92.88346862792969,
+          "sad": 0.26496994495391846,
+          "surprise": 0.0007480650674551725,
+          "neutral": 6.778144836425781
+        }
+      },
+      {
+        "timestamp": "2025-10-17T16:26:32.270338",
+        "elapsed_seconds": 15.16,
+        "dominant_emotion": "happy",
+        "emotion_scores": {
+          "angry": 0.060965027660131454,
+          "disgust": 3.369186174495553e-07,
+          "fear": 0.00027637038147076964,
+          "happy": 93.5743408203125,
+          "sad": 0.04650147259235382,
+          "surprise": 0.0011076099472120404,
+          "neutral": 6.316806316375732
+        }
+      },
+      {
+        "timestamp": "2025-10-17T16:26:32.512042",
+        "elapsed_seconds": 15.36,
+        "dominant_emotion": "happy",
+        "emotion_scores": {
+          "angry": 2.146528959274292,
+          "disgust": 5.137594030202308e-07,
+          "fear": 0.0037123814690858126,
+          "happy": 51.29271697998047,
+          "sad": 2.0918431282043457,
+          "surprise": 0.0008916499209590256,
+          "neutral": 44.46430206298828
+        }
+      },
+      {
+        "timestamp": "2025-10-17T16:26:32.726472",
+        "elapsed_seconds": 15.62,
+        "dominant_emotion": "neutral",
+        "emotion_scores": {
+          "angry": 4.487862586975098,
+          "disgust": 5.042952125222655e-06,
+          "fear": 0.017294958233833313,
+          "happy": 23.905784606933594,
+          "sad": 3.5736746788024902,
+          "surprise": 0.0025469493120908737,
+          "neutral": 68.01283264160156
+        }
+      },
+      {
+        "timestamp": "2025-10-17T16:26:32.970001",
+        "elapsed_seconds": 15.85,
+        "dominant_emotion": "happy",
+        "emotion_scores": {
+          "angry": 4.647665977478027,
+          "disgust": 2.1745259800809436e-05,
+          "fear": 0.017291942611336708,
+          "happy": 82.52638244628906,
+          "sad": 2.4721763134002686,
+          "surprise": 0.016851987689733505,
+          "neutral": 10.319609642028809
+        }
+      },
+      {
+        "timestamp": "2025-10-17T16:26:33.185439",
+        "elapsed_seconds": 16.04,
+        "dominant_emotion": "happy",
+        "emotion_scores": {
+          "angry": 9.654683113098145,
+          "disgust": 0.00016758088895585388,
+          "fear": 0.10265456140041351,
+          "happy": 68.56954956054688,
+          "sad": 6.541622638702393,
+          "surprise": 0.040729280561208725,
+          "neutral": 15.090592384338379
+        }
+      },
+      {
+        "timestamp": "2025-10-17T16:26:33.471416",
+        "elapsed_seconds": 16.33,
+        "dominant_emotion": "happy",
+        "emotion_scores": {
+          "angry": 6.637795925140381,
+          "disgust": 0.0002807386335916817,
+          "fear": 0.07178579270839691,
+          "happy": 84.37403106689453,
+          "sad": 2.8775506019592285,
+          "surprise": 0.027339063584804535,
+          "neutral": 6.011214733123779
+        }
+      },
+      {
+        "timestamp": "2025-10-17T16:26:33.792278",
+        "elapsed_seconds": 16.64,
+        "dominant_emotion": "happy",
+        "emotion_scores": {
+          "angry": 8.07724666595459,
+          "disgust": 0.0009868366178125143,
+          "fear": 0.13095048069953918,
+          "happy": 76.45967864990234,
+          "sad": 4.122281074523926,
+          "surprise": 0.05377919226884842,
+          "neutral": 11.155073165893555
+        }
+      },
+      {
+        "timestamp": "2025-10-17T16:26:34.017411",
+        "elapsed_seconds": 16.84,
+        "dominant_emotion": "neutral",
+        "emotion_scores": {
+          "angry": 12.659001350402832,
+          "disgust": 8.28202537377365e-05,
+          "fear": 0.09572824835777283,
+          "happy": 32.06211471557617,
+          "sad": 8.107206344604492,
+          "surprise": 0.008324066177010536,
+          "neutral": 47.06753921508789
+        }
+      },
+      {
+        "timestamp": "2025-10-17T16:26:34.231694",
+        "elapsed_seconds": 17.14,
+        "dominant_emotion": "happy",
+        "emotion_scores": {
+          "angry": 12.08377742767334,
+          "disgust": 0.0009041091543622315,
+          "fear": 0.1441015899181366,
+          "happy": 46.08101272583008,
+          "sad": 9.493986129760742,
+          "surprise": 0.019373204559087753,
+          "neutral": 32.176849365234375
+        }
+      },
+      {
+        "timestamp": "2025-10-17T16:26:34.550274",
+        "elapsed_seconds": 17.36,
+        "dominant_emotion": "neutral",
+        "emotion_scores": {
+          "angry": 7.242733001708984,
+          "disgust": 0.00028545589884743094,
+          "fear": 0.5890462398529053,
+          "happy": 18.21696662902832,
+          "sad": 16.583616256713867,
+          "surprise": 0.051746297627687454,
+          "neutral": 57.31561279296875
+        }
+      },
+      {
+        "timestamp": "2025-10-17T16:26:34.774536",
+        "elapsed_seconds": 17.59,
+        "dominant_emotion": "happy",
+        "emotion_scores": {
+          "angry": 2.9093353748321533,
+          "disgust": 3.534572897478938e-05,
+          "fear": 0.02770562656223774,
+          "happy": 71.37638854980469,
+          "sad": 2.4804720878601074,
+          "surprise": 0.0015704421093687415,
+          "neutral": 23.20450210571289
+        }
+      },
+      {
+        "timestamp": "2025-10-17T16:26:35.018744",
+        "elapsed_seconds": 17.87,
+        "dominant_emotion": "happy",
+        "emotion_scores": {
+          "angry": 2.808129072189331,
+          "disgust": 5.983919254504144e-05,
+          "fear": 0.014991255477070808,
+          "happy": 72.91719055175781,
+          "sad": 3.659750461578369,
+          "surprise": 0.003412931226193905,
+          "neutral": 20.596466064453125
+        }
+      },
+      {
+        "timestamp": "2025-10-17T16:26:35.224784",
+        "elapsed_seconds": 18.06,
+        "dominant_emotion": "happy",
+        "emotion_scores": {
+          "angry": 10.376179695129395,
+          "disgust": 0.000738150323741138,
+          "fear": 0.5181857943534851,
+          "happy": 40.155723571777344,
+          "sad": 16.356979370117188,
+          "surprise": 0.037994369864463806,
+          "neutral": 32.554203033447266
+        }
+      },
+      {
+        "timestamp": "2025-10-17T16:26:35.418332",
+        "elapsed_seconds": 18.26,
+        "dominant_emotion": "sad",
+        "emotion_scores": {
+          "angry": 1.151311046498904e-08,
+          "disgust": 8.75374415559545e-15,
+          "fear": 1.5938869182718918e-05,
+          "happy": 6.729467116883825e-08,
+          "sad": 99.99991607666016,
+          "surprise": 4.0948186561008546e-17,
+          "neutral": 6.0120077250758186e-05
+        }
+      },
+      {
+        "timestamp": "2025-10-17T16:26:35.646525",
+        "elapsed_seconds": 18.55,
+        "dominant_emotion": "happy",
+        "emotion_scores": {
+          "angry": 3.1214699745178223,
+          "disgust": 0.0009284187108278275,
+          "fear": 0.2336004078388214,
+          "happy": 70.64733123779297,
+          "sad": 8.347739219665527,
+          "surprise": 0.08133469521999359,
+          "neutral": 17.567596435546875
+        }
+      },
+      {
+        "timestamp": "2025-10-17T16:26:35.929838",
+        "elapsed_seconds": 18.82,
+        "dominant_emotion": "happy",
+        "emotion_scores": {
+          "angry": 0.8223907947540283,
+          "disgust": 5.0508529966464266e-05,
+          "fear": 0.015522439032793045,
+          "happy": 86.18192291259766,
+          "sad": 1.5885834693908691,
+          "surprise": 0.014497369527816772,
+          "neutral": 11.37703800201416
+        }
+      },
+      {
+        "timestamp": "2025-10-17T16:26:36.298049",
+        "elapsed_seconds": 19.12,
+        "dominant_emotion": "happy",
+        "emotion_scores": {
+          "angry": 1.267385721206665,
+          "disgust": 0.0004563037073239684,
+          "fear": 0.4750175178050995,
+          "happy": 79.46599578857422,
+          "sad": 4.52197790145874,
+          "surprise": 0.08398305624723434,
+          "neutral": 14.18518352508545
+        }
+      },
+      {
+        "timestamp": "2025-10-17T16:26:36.520978",
+        "elapsed_seconds": 19.4,
+        "dominant_emotion": "happy",
+        "emotion_scores": {
+          "angry": 1.3397400379180908,
+          "disgust": 0.00010987569839926437,
+          "fear": 0.0634029433131218,
+          "happy": 79.61439514160156,
+          "sad": 2.795424699783325,
+          "surprise": 0.031892187893390656,
+          "neutral": 16.155029296875
+        }
+      },
+      {
+        "timestamp": "2025-10-17T16:26:36.819577",
+        "elapsed_seconds": 19.69,
+        "dominant_emotion": "happy",
+        "emotion_scores": {
+          "angry": 2.3402090072631836,
+          "disgust": 2.1484131139004603e-05,
+          "fear": 0.02226366102695465,
+          "happy": 60.380977630615234,
+          "sad": 4.870100498199463,
+          "surprise": 0.0028226382564753294,
+          "neutral": 32.383602142333984
+        }
+      },
+      {
+        "timestamp": "2025-10-17T16:26:37.043092",
+        "elapsed_seconds": 19.91,
+        "dominant_emotion": "happy",
+        "emotion_scores": {
+          "angry": 4.230226516723633,
+          "disgust": 0.00011519713734742254,
+          "fear": 0.10601422190666199,
+          "happy": 60.887271881103516,
+          "sad": 4.227895259857178,
+          "surprise": 0.052228476852178574,
+          "neutral": 30.496252059936523
+        }
+      },
+      {
+        "timestamp": "2025-10-17T16:26:37.250207",
+        "elapsed_seconds": 20.12,
+        "dominant_emotion": "neutral",
+        "emotion_scores": {
+          "angry": 10.277627944946289,
+          "disgust": 0.0003612240543588996,
+          "fear": 0.5409411787986755,
+          "happy": 30.797260284423828,
+          "sad": 11.607427597045898,
+          "surprise": 0.03195798024535179,
+          "neutral": 46.744422912597656
+        }
+      }
+    ]
+  },
+  "questions": {
+    "success": true,
+    "data": {
+      "totalQuestions": 5,
+      "questions": [
+        {
+          "questionId": "beauty_Q1_315",
+          "topic": "beauty",
+          "difficulty": 1,
+          "bloomLevel": "Remember",
+          "type": "multiple_choice",
+          "questionText": "Which of these is often considered beautiful in nature by many people?",
+          "options": [
+            "A dull, grey rock",
+            "A wilted leaf",
+            "A colorful rainbow",
+            "A muddy puddle"
+          ],
+          "correctAnswer": "A colorful rainbow",
+          "explanation": "Rainbows are widely admired for their vibrant colors and are a common example of natural beauty."
+        },
+        {
+          "questionId": "beauty_Q2_315",
+          "topic": "beauty",
+          "difficulty": 2,
+          "bloomLevel": "Understand",
+          "type": "short_answer",
+          "questionText": "What does it mean when someone says 'inner beauty' is important?",
+          "options": [],
+          "correctAnswer": "Inner beauty means having good qualities inside, like being kind, honest, helpful, and having a good heart, not just what someone looks like on the outside.",
+          "explanation": "Inner beauty refers to a person's character, personality, and positive moral qualities, rather than their physical appearance."
+        },
+        {
+          "questionId": "beauty_Q3_315",
+          "topic": "beauty",
+          "difficulty": 2,
+          "bloomLevel": "Apply",
+          "type": "short_answer",
+          "questionText": "Imagine you are making a greeting card for a friend. What kind of picture would you draw on it to make it look beautiful and cheerful?",
+          "options": [],
+          "correctAnswer": "A good answer would describe drawing something bright and pleasant, like joyful flowers, fluffy clouds, a smiling sun, or happy animals, to show beauty and cheerfulness.",
+          "explanation": "Applying the concept of beauty in art often involves using elements that evoke positive feelings, like bright colors and pleasant subjects, to create a cheerful design."
+        },
+        {
+          "questionId": "beauty_Q4_315",
+          "topic": "beauty",
+          "difficulty": 3,
+          "bloomLevel": "Analyze",
+          "type": "short_answer",
+          "questionText": "Can two very different things, like a fluffy white cloud and a tall, green tree, both be beautiful? Why or why not?",
+          "options": [],
+          "correctAnswer": "Yes, absolutely! They can both be beautiful in their own ways. The cloud can be beautiful because it's soft and changes shape, and the tree can be beautiful because it's strong, gives shade, and has green leaves. Beauty is found in many different things.",
+          "explanation": "Beauty is subjective and diverse; different objects can possess unique qualities that are appreciated as beautiful, demonstrating that beauty isn't limited to a single form or type."
+        },
+        {
+          "questionId": "beauty_Q5_315",
+          "topic": "beauty",
+          "difficulty": 2,
+          "bloomLevel": "Understand",
+          "type": "multiple_choice",
+          "questionText": "Which action best shows 'beauty' in how you treat others?",
+          "options": [
+            "Ignoring someone who asks for help",
+            "Being mean to your friends",
+            "Sharing your toys with a classmate",
+            "Taking all the snacks for yourself"
+          ],
+          "correctAnswer": "Sharing your toys with a classmate",
+          "explanation": "Showing kindness, generosity, and compassion through actions like sharing is often considered a demonstration of inner beauty and contributes positively to relationships."
+        }
+      ]
+    },
+    "rawResponse": "```json\n{\n  \"totalQuestions\": 5,\n  \"questions\": [\n    {\n      \"questionId\": \"beauty_Q1_315\",\n      \"topic\": \"beauty\",\n      \"difficulty\": 1,\n      \"bloomLevel\": \"Remember\",\n      \"type\": \"multiple_choice\",\n      \"questionText\": \"Which of these is often considered beautiful in nature by many people?\",\n      \"options\": [\n        \"A dull, grey rock\",\n        \"A wilted leaf\",\n        \"A colorful rainbow\",\n        \"A muddy puddle\"\n      ],\n      \"correctAnswer\": \"A colorful rainbow\",\n      \"explanation\": \"Rainbows are widely admired for their vibrant colors and are a common example of natural beauty.\"\n    },\n    {\n      \"questionId\": \"beauty_Q2_315\",\n      \"topic\": \"beauty\",\n      \"difficulty\": 2,\n      \"bloomLevel\": \"Understand\",\n      \"type\": \"short_answer\",\n      \"questionText\": \"What does it mean when someone says 'inner beauty' is important?\",\n      \"options\": [],\n      \"correctAnswer\": \"Inner beauty means having good qualities inside, like being kind, honest, helpful, and having a good heart, not just what someone looks like on the outside.\",\n      \"explanation\": \"Inner beauty refers to a person's character, personality, and positive moral qualities, rather than their physical appearance.\"\n    },\n    {\n      \"questionId\": \"beauty_Q3_315\",\n      \"topic\": \"beauty\",\n      \"difficulty\": 2,\n      \"bloomLevel\": \"Apply\",\n      \"type\": \"short_answer\",\n      \"questionText\": \"Imagine you are making a greeting card for a friend. What kind of picture would you draw on it to make it look beautiful and cheerful?\",\n      \"options\": [],\n      \"correctAnswer\": \"A good answer would describe drawing something bright and pleasant, like joyful flowers, fluffy clouds, a smiling sun, or happy animals, to show beauty and cheerfulness.\",\n      \"explanation\": \"Applying the concept of beauty in art often involves using elements that evoke positive feelings, like bright colors and pleasant subjects, to create a cheerful design.\"\n    },\n    {\n      \"questionId\": \"beauty_Q4_315\",\n      \"topic\": \"beauty\",\n      \"difficulty\": 3,\n      \"bloomLevel\": \"Analyze\",\n      \"type\": \"short_answer\",\n      \"questionText\": \"Can two very different things, like a fluffy white cloud and a tall, green tree, both be beautiful? Why or why not?\",\n      \"options\": [],\n      \"correctAnswer\": \"Yes, absolutely! They can both be beautiful in their own ways. The cloud can be beautiful because it's soft and changes shape, and the tree can be beautiful because it's strong, gives shade, and has green leaves. Beauty is found in many different things.\",\n      \"explanation\": \"Beauty is subjective and diverse; different objects can possess unique qualities that are appreciated as beautiful, demonstrating that beauty isn't limited to a single form or type.\"\n    },\n    {\n      \"questionId\": \"beauty_Q5_315\",\n      \"topic\": \"beauty\",\n      \"difficulty\": 2,\n      \"bloomLevel\": \"Understand\",\n      \"type\": \"multiple_choice\",\n      \"questionText\": \"Which action best shows 'beauty' in how you treat others?\",\n      \"options\": [\n        \"Ignoring someone who asks for help\",\n        \"Being mean to your friends\",\n        \"Sharing your toys with a classmate\",\n        \"Taking all the snacks for yourself\"\n      ],\n      \"correctAnswer\": \"Sharing your toys with a classmate\",\n      \"explanation\": \"Showing kindness, generosity, and compassion through actions like sharing is often considered a demonstration of inner beauty and contributes positively to relationships.\"\n    }\n  ]\n}\n```"
+  }
+}

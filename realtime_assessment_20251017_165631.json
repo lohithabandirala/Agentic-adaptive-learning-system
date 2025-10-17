@@ -1,0 +1,1822 @@
+{
+  "topic": "polynomials",
+  "student_id": "36",
+  "grade": "3",
+  "start_time": "2025-10-17T16:54:50.536690",
+  "questions_and_answers": [
+    {
+      "question_number": 1,
+      "emotion_data_during_answer": {
+        "analysis_duration_seconds": 12.09,
+        "total_frames_analyzed": 37,
+        "start_time": "2025-10-17T16:55:11.014876",
+        "end_time": "2025-10-17T16:55:19.608500",
+        "overall_dominant_emotion": "neutral",
+        "dominant_emotion_percentages": {
+          "neutral": 97.3,
+          "sad": 2.7
+        },
+        "average_emotion_scores": {
+          "neutral": 95.35,
+          "sad": 3.42,
+          "fear": 0.73,
+          "angry": 0.37,
+          "surprise": 0.09,
+          "happy": 0.05,
+          "disgust": 0.0
+        },
+        "stress_level": 1,
+        "detailed_timeline": [
+          {
+            "timestamp": "2025-10-17T16:55:11.014876",
+            "elapsed_seconds": 2.28,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 0.012248333543539047,
+              "disgust": 6.099845628604328e-11,
+              "fear": 0.004753910005092621,
+              "happy": 0.0005051063490100205,
+              "sad": 0.13968008756637573,
+              "surprise": 0.00019848140073008835,
+              "neutral": 99.84262084960938
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:55:11.248109",
+            "elapsed_seconds": 3.31,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 0.08436288684606552,
+              "disgust": 2.954927147413855e-08,
+              "fear": 0.08075883984565735,
+              "happy": 0.006736320909112692,
+              "sad": 0.2670545279979706,
+              "surprise": 0.02786068432033062,
+              "neutral": 99.53323364257812
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:55:11.383330",
+            "elapsed_seconds": 3.45,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 0.10252838581800461,
+              "disgust": 1.1168965841079626e-07,
+              "fear": 0.19822898507118225,
+              "happy": 0.01338994037359953,
+              "sad": 0.8242582678794861,
+              "surprise": 0.06366609781980515,
+              "neutral": 98.79792785644531
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:55:11.538587",
+            "elapsed_seconds": 3.61,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 0.15067096054553986,
+              "disgust": 7.37655682314653e-07,
+              "fear": 0.10533485561609268,
+              "happy": 0.04239581152796745,
+              "sad": 1.2883458137512207,
+              "surprise": 0.0028933112043887377,
+              "neutral": 98.41035461425781
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:55:11.683867",
+            "elapsed_seconds": 3.75,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 0.07731804996728897,
+              "disgust": 5.1404757783757304e-08,
+              "fear": 0.12708604335784912,
+              "happy": 0.009080536663532257,
+              "sad": 0.9424324631690979,
+              "surprise": 0.0158059261739254,
+              "neutral": 98.8282699584961
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:55:11.843086",
+            "elapsed_seconds": 3.9,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 0.08512997627258301,
+              "disgust": 1.597457810476044e-08,
+              "fear": 0.0324590839445591,
+              "happy": 0.0058458587154746056,
+              "sad": 1.0972390174865723,
+              "surprise": 0.0014334406005218625,
+              "neutral": 98.77789306640625
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:55:11.972026",
+            "elapsed_seconds": 4.04,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 0.11147887259721756,
+              "disgust": 1.9513990423547511e-07,
+              "fear": 0.1332041472196579,
+              "happy": 0.03443516418337822,
+              "sad": 1.2021058797836304,
+              "surprise": 0.011417858302593231,
+              "neutral": 98.50736236572266
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:55:12.103802",
+            "elapsed_seconds": 4.17,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 0.06954129040241241,
+              "disgust": 3.145263605119908e-08,
+              "fear": 0.1131480410695076,
+              "happy": 0.021542660892009735,
+              "sad": 0.11358292400836945,
+              "surprise": 0.14536425471305847,
+              "neutral": 99.53682708740234
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:55:12.242870",
+            "elapsed_seconds": 4.31,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 0.04884177818894386,
+              "disgust": 2.6299881383806678e-08,
+              "fear": 0.11769026517868042,
+              "happy": 0.016929002478718758,
+              "sad": 0.6048634052276611,
+              "surprise": 0.020667677745223045,
+              "neutral": 99.19100952148438
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:55:12.369593",
+            "elapsed_seconds": 4.44,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 0.05836259201169014,
+              "disgust": 4.187386437592977e-08,
+              "fear": 0.119135282933712,
+              "happy": 0.019702835008502007,
+              "sad": 0.3710339665412903,
+              "surprise": 0.051756151020526886,
+              "neutral": 99.38001251220703
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:55:12.586476",
+            "elapsed_seconds": 4.61,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 0.06273619085550308,
+              "disgust": 1.2628782464219057e-08,
+              "fear": 0.03514713793992996,
+              "happy": 0.010196775197982788,
+              "sad": 0.15901337563991547,
+              "surprise": 0.025996943935751915,
+              "neutral": 99.70690155029297
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:55:12.834947",
+            "elapsed_seconds": 4.89,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 0.041473645716905594,
+              "disgust": 1.8277167557201324e-09,
+              "fear": 0.028304575011134148,
+              "happy": 0.0038182397838681936,
+              "sad": 0.15386804938316345,
+              "surprise": 0.020762093365192413,
+              "neutral": 99.75177001953125
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:55:13.069654",
+            "elapsed_seconds": 5.14,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 0.11796963214874268,
+              "disgust": 3.3701289225973596e-07,
+              "fear": 0.06399039924144745,
+              "happy": 0.029167914763092995,
+              "sad": 1.0709223747253418,
+              "surprise": 0.006832192651927471,
+              "neutral": 98.71111297607422
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:55:13.351971",
+            "elapsed_seconds": 5.38,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 0.15523260831832886,
+              "disgust": 2.568106935996184e-07,
+              "fear": 0.12397269159555435,
+              "happy": 0.07236781716346741,
+              "sad": 0.6470212340354919,
+              "surprise": 0.04787556082010269,
+              "neutral": 98.95352935791016
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:55:13.628469",
+            "elapsed_seconds": 5.63,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 0.2396351546049118,
+              "disgust": 1.459029590478167e-07,
+              "fear": 0.10548528283834457,
+              "happy": 0.006211775820702314,
+              "sad": 0.8707683086395264,
+              "surprise": 0.02481444925069809,
+              "neutral": 98.75308227539062
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:55:14.136341",
+            "elapsed_seconds": 6.02,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 0.055555298924446106,
+              "disgust": 9.334154782436599e-09,
+              "fear": 0.01312777865678072,
+              "happy": 0.011931272223591805,
+              "sad": 0.19368888437747955,
+              "surprise": 0.008977299556136131,
+              "neutral": 99.71672058105469
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:55:14.389809",
+            "elapsed_seconds": 6.44,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 2.0291558030294254e-05,
+              "disgust": 3.977780604902392e-11,
+              "fear": 0.18308985233306885,
+              "happy": 0.3686474859714508,
+              "sad": 0.5223619937896729,
+              "surprise": 0.011049425229430199,
+              "neutral": 98.91483306884766
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:55:14.616682",
+            "elapsed_seconds": 6.68,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 0.41828760504722595,
+              "disgust": 1.7602882280698395e-06,
+              "fear": 0.2661736309528351,
+              "happy": 0.08708947151899338,
+              "sad": 0.9810215830802917,
+              "surprise": 0.11437807977199554,
+              "neutral": 98.13304901123047
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:55:14.895889",
+            "elapsed_seconds": 6.92,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 0.2102903574705124,
+              "disgust": 3.1565247127218754e-07,
+              "fear": 0.6384661197662354,
+              "happy": 0.0015293025644496083,
+              "sad": 2.220752239227295,
+              "surprise": 0.01773764193058014,
+              "neutral": 96.91122436523438
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:55:15.139285",
+            "elapsed_seconds": 7.21,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 0.0392264723777771,
+              "disgust": 1.410575123372837e-08,
+              "fear": 1.8399014472961426,
+              "happy": 0.00010113629105035216,
+              "sad": 45.01778030395508,
+              "surprise": 0.00023429602151736617,
+              "neutral": 53.10275650024414
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:55:15.435113",
+            "elapsed_seconds": 7.46,
+            "dominant_emotion": "sad",
+            "emotion_scores": {
+              "angry": 6.683034896850586,
+              "disgust": 0.00010530947474762797,
+              "fear": 17.444793701171875,
+              "happy": 0.04760599136352539,
+              "sad": 44.469852447509766,
+              "surprise": 1.557600498199463,
+              "neutral": 29.797012329101562
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:55:15.685008",
+            "elapsed_seconds": 7.74,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 1.3404009342193604,
+              "disgust": 3.178734186803922e-05,
+              "fear": 0.9800810217857361,
+              "happy": 0.3311150372028351,
+              "sad": 1.1369946002960205,
+              "surprise": 0.14369072020053864,
+              "neutral": 96.06768798828125
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:55:15.957614",
+            "elapsed_seconds": 7.97,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 0.9908671975135803,
+              "disgust": 2.6049858206533827e-05,
+              "fear": 1.6124755144119263,
+              "happy": 0.06050652638077736,
+              "sad": 3.9799563884735107,
+              "surprise": 0.3395906388759613,
+              "neutral": 93.01657104492188
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:55:16.291100",
+            "elapsed_seconds": 8.29,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 0.3124673068523407,
+              "disgust": 3.406544919926091e-06,
+              "fear": 0.1604764312505722,
+              "happy": 0.024825984612107277,
+              "sad": 3.517265796661377,
+              "surprise": 0.00113437429536134,
+              "neutral": 95.98382568359375
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:55:16.513931",
+            "elapsed_seconds": 8.57,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 0.2398279756307602,
+              "disgust": 6.239580443434534e-07,
+              "fear": 0.22547030448913574,
+              "happy": 0.09887075424194336,
+              "sad": 0.5841407775878906,
+              "surprise": 0.09980859607458115,
+              "neutral": 98.75188446044922
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:55:16.745303",
+            "elapsed_seconds": 8.81,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 0.3709523677825928,
+              "disgust": 1.0509994581298088e-06,
+              "fear": 0.34029704332351685,
+              "happy": 0.05027783662080765,
+              "sad": 0.7405986785888672,
+              "surprise": 0.1156214103102684,
+              "neutral": 98.38225555419922
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:55:16.976156",
+            "elapsed_seconds": 9.03,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 0.19228948652744293,
+              "disgust": 2.413167067061295e-06,
+              "fear": 0.23018285632133484,
+              "happy": 0.05940531566739082,
+              "sad": 1.6786164045333862,
+              "surprise": 0.011597225442528725,
+              "neutral": 97.82791137695312
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:55:17.252102",
+            "elapsed_seconds": 9.25,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 0.14890830218791962,
+              "disgust": 3.2692150853108615e-07,
+              "fear": 0.1388038843870163,
+              "happy": 0.026362834498286247,
+              "sad": 1.2378002405166626,
+              "surprise": 0.019182810559868813,
+              "neutral": 98.42893981933594
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:55:17.553912",
+            "elapsed_seconds": 9.57,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 0.043716367334127426,
+              "disgust": 8.342484036916176e-09,
+              "fear": 0.03708559647202492,
+              "happy": 0.0030793598853051662,
+              "sad": 0.8490102291107178,
+              "surprise": 0.001326324767433107,
+              "neutral": 99.06578063964844
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:55:17.781813",
+            "elapsed_seconds": 9.78,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 0.05669012293219566,
+              "disgust": 1.3685639288496532e-08,
+              "fear": 0.1737544983625412,
+              "happy": 0.004048714879900217,
+              "sad": 0.8991232514381409,
+              "surprise": 0.005715333390980959,
+              "neutral": 98.86067199707031
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:55:18.003070",
+            "elapsed_seconds": 10.06,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 0.09302213042974472,
+              "disgust": 6.186494516668972e-08,
+              "fear": 0.15276825428009033,
+              "happy": 0.027571285143494606,
+              "sad": 1.0291316509246826,
+              "surprise": 0.032694850116968155,
+              "neutral": 98.6648178100586
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:55:18.239897",
+            "elapsed_seconds": 10.3,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 0.2925012707710266,
+              "disgust": 9.613413567421958e-06,
+              "fear": 0.2928173243999481,
+              "happy": 0.04084935411810875,
+              "sad": 3.4662458896636963,
+              "surprise": 0.0022024980280548334,
+              "neutral": 95.9053726196289
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:55:18.529479",
+            "elapsed_seconds": 10.59,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 0.14258089661598206,
+              "disgust": 3.3310988101220573e-07,
+              "fear": 0.316212922334671,
+              "happy": 0.05949161574244499,
+              "sad": 0.39296218752861023,
+              "surprise": 0.1675424426794052,
+              "neutral": 98.92121124267578
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:55:18.827247",
+            "elapsed_seconds": 10.81,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 0.1564313769340515,
+              "disgust": 6.007742854308162e-07,
+              "fear": 0.16567106544971466,
+              "happy": 0.036787260323762894,
+              "sad": 1.2123234272003174,
+              "surprise": 0.010209277272224426,
+              "neutral": 98.4185791015625
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:55:19.102448",
+            "elapsed_seconds": 11.1,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 0.12100490182638168,
+              "disgust": 1.948439205534669e-07,
+              "fear": 0.13760223984718323,
+              "happy": 0.026004472747445107,
+              "sad": 1.048901915550232,
+              "surprise": 0.03180752322077751,
+              "neutral": 98.63468170166016
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:55:19.340103",
+            "elapsed_seconds": 11.4,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 0.17275993525981903,
+              "disgust": 9.226607744494686e-07,
+              "fear": 0.19335420429706573,
+              "happy": 0.053477101027965546,
+              "sad": 1.501918077468872,
+              "surprise": 0.012997737154364586,
+              "neutral": 98.06549835205078
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:55:19.608500",
+            "elapsed_seconds": 11.65,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 0.04090872406959534,
+              "disgust": 6.48507825218303e-09,
+              "fear": 0.029224593192338943,
+              "happy": 0.011917494237422943,
+              "sad": 0.14658483862876892,
+              "surprise": 0.010942304506897926,
+              "neutral": 99.76041412353516
+            }
+          }
+        ]
+      },
+      "question": {
+        "questionId": "poly3rd_001",
+        "topic": "polynomials",
+        "difficulty": 1,
+        "bloomLevel": "Remember",
+        "type": "multiple-choice",
+        "questionText": "Look at the items below:\n\ud83c\udf4e + \ud83c\udf4e + \ud83c\udf4a + \ud83c\udf4e\nHow many \ud83c\udf4e (apples) are there in total?",
+        "options": [
+          "A) 1",
+          "B) 2",
+          "C) 3",
+          "D) 4"
+        ],
+        "correctAnswer": "C) 3",
+        "explanation": "To find the total number of apples (\ud83c\udf4e), you need to count only the apple symbols. There are three \ud83c\udf4e symbols and one \ud83c\udf4a symbol. So, there are 3 apples in total."
+      },
+      "student_answer": {
+        "answer": "3",
+        "timestamp": "2025-10-17T16:55:19.596500"
+      },
+      "is_correct": true,
+      "timestamp": "2025-10-17T16:55:19.984142"
+    },
+    {
+      "question_number": 2,
+      "emotion_data_during_answer": {
+        "analysis_duration_seconds": 16.49,
+        "total_frames_analyzed": 57,
+        "start_time": "2025-10-17T16:55:44.289853",
+        "end_time": "2025-10-17T16:55:59.938283",
+        "overall_dominant_emotion": "neutral",
+        "dominant_emotion_percentages": {
+          "neutral": 94.74,
+          "sad": 3.51,
+          "angry": 1.75
+        },
+        "average_emotion_scores": {
+          "neutral": 83.2,
+          "sad": 11.88,
+          "angry": 2.54,
+          "fear": 1.73,
+          "happy": 0.57,
+          "surprise": 0.09,
+          "disgust": 0.0
+        },
+        "stress_level": 2,
+        "detailed_timeline": [
+          {
+            "timestamp": "2025-10-17T16:55:44.289853",
+            "elapsed_seconds": 0.41,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 0.0778227299451828,
+              "disgust": 5.0333312628936255e-08,
+              "fear": 0.05303501710295677,
+              "happy": 0.0067540123127400875,
+              "sad": 1.0787577629089355,
+              "surprise": 0.0012279528891667724,
+              "neutral": 98.78240203857422
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:55:44.464902",
+            "elapsed_seconds": 0.6,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 0.7173578143119812,
+              "disgust": 3.7427336792461574e-05,
+              "fear": 0.9327895045280457,
+              "happy": 0.10069399327039719,
+              "sad": 5.476570129394531,
+              "surprise": 0.02387681044638157,
+              "neutral": 92.74867248535156
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:55:44.684080",
+            "elapsed_seconds": 0.78,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 1.3144371509552002,
+              "disgust": 0.00023822818184271455,
+              "fear": 1.5301655530929565,
+              "happy": 0.3806436061859131,
+              "sad": 11.482275009155273,
+              "surprise": 0.01324776653200388,
+              "neutral": 85.27899932861328
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:55:45.078751",
+            "elapsed_seconds": 1.07,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 9.541070938110352,
+              "disgust": 0.006154460366815329,
+              "fear": 4.233398914337158,
+              "happy": 3.6322145462036133,
+              "sad": 26.22333526611328,
+              "surprise": 1.1563825607299805,
+              "neutral": 55.20745086669922
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:55:45.395775",
+            "elapsed_seconds": 1.46,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 0.8895413279533386,
+              "disgust": 3.5669916087499587e-06,
+              "fear": 1.1878859996795654,
+              "happy": 10.214982986450195,
+              "sad": 7.30224084854126,
+              "surprise": 0.16504979133605957,
+              "neutral": 80.24029541015625
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:55:45.725213",
+            "elapsed_seconds": 1.85,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 0.5556299090385437,
+              "disgust": 1.6046815289882943e-06,
+              "fear": 0.3197799623012543,
+              "happy": 0.1947784274816513,
+              "sad": 10.882923126220703,
+              "surprise": 0.032508064061403275,
+              "neutral": 88.0143814086914
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:55:46.164307",
+            "elapsed_seconds": 2.29,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 0.09575427323579788,
+              "disgust": 5.477609761328495e-07,
+              "fear": 0.14003846049308777,
+              "happy": 0.2538892924785614,
+              "sad": 1.902101993560791,
+              "surprise": 0.016412025317549706,
+              "neutral": 97.59180450439453
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:55:46.504616",
+            "elapsed_seconds": 2.64,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 0.8496530055999756,
+              "disgust": 2.3281112589756958e-05,
+              "fear": 0.32748550176620483,
+              "happy": 0.3966313600540161,
+              "sad": 7.658329486846924,
+              "surprise": 0.006865689530968666,
+              "neutral": 90.7610092163086
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:55:46.766446",
+            "elapsed_seconds": 2.89,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 0.5613514184951782,
+              "disgust": 2.2951056962483563e-05,
+              "fear": 0.7419904470443726,
+              "happy": 0.5259402990341187,
+              "sad": 3.037412643432617,
+              "surprise": 0.06027112528681755,
+              "neutral": 95.07301330566406
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:55:47.045486",
+            "elapsed_seconds": 3.18,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 0.8774104714393616,
+              "disgust": 9.335295180790126e-05,
+              "fear": 2.184556245803833,
+              "happy": 0.8971545100212097,
+              "sad": 7.986318111419678,
+              "surprise": 0.10276167839765549,
+              "neutral": 87.95170593261719
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:55:47.317759",
+            "elapsed_seconds": 3.42,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 2.2301275730133057,
+              "disgust": 9.614064038032666e-05,
+              "fear": 1.287522315979004,
+              "happy": 0.2684154808521271,
+              "sad": 35.13561248779297,
+              "surprise": 0.006662097293883562,
+              "neutral": 61.07156753540039
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:55:47.569939",
+            "elapsed_seconds": 3.69,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 2.724210023880005,
+              "disgust": 0.0010900481138378382,
+              "fear": 3.138782024383545,
+              "happy": 0.786641001701355,
+              "sad": 25.619165420532227,
+              "surprise": 0.08313363790512085,
+              "neutral": 67.64698028564453
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:55:47.864552",
+            "elapsed_seconds": 3.95,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 4.202003479003906,
+              "disgust": 0.0007776139536872506,
+              "fear": 2.196781873703003,
+              "happy": 1.0286871194839478,
+              "sad": 14.502241134643555,
+              "surprise": 0.17618560791015625,
+              "neutral": 77.89332580566406
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:55:48.078978",
+            "elapsed_seconds": 4.17,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 2.142082691192627,
+              "disgust": 0.00018924557662103325,
+              "fear": 1.4159027338027954,
+              "happy": 1.1557825803756714,
+              "sad": 6.067709922790527,
+              "surprise": 0.7232258319854736,
+              "neutral": 88.49510955810547
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:55:48.375237",
+            "elapsed_seconds": 4.48,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 1.7883719205856323,
+              "disgust": 5.7772085710894316e-05,
+              "fear": 2.333815336227417,
+              "happy": 0.04342550411820412,
+              "sad": 28.08555030822754,
+              "surprise": 0.006316592451184988,
+              "neutral": 67.74246978759766
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:55:48.654495",
+            "elapsed_seconds": 4.71,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 3.004728078842163,
+              "disgust": 0.0005571387009695172,
+              "fear": 3.134427309036255,
+              "happy": 1.0102227926254272,
+              "sad": 29.961729049682617,
+              "surprise": 0.2328675538301468,
+              "neutral": 62.65546798706055
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:55:48.880994",
+            "elapsed_seconds": 4.97,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 0.9769557118415833,
+              "disgust": 0.00011505776637932286,
+              "fear": 1.718002200126648,
+              "happy": 0.9292663931846619,
+              "sad": 6.496370792388916,
+              "surprise": 0.3216722905635834,
+              "neutral": 89.5576171875
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:55:49.186377",
+            "elapsed_seconds": 5.26,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 3.510869264602661,
+              "disgust": 0.0004324213368818164,
+              "fear": 1.3095488548278809,
+              "happy": 0.7709583640098572,
+              "sad": 27.75735855102539,
+              "surprise": 0.05915224924683571,
+              "neutral": 66.59168243408203
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:55:49.412270",
+            "elapsed_seconds": 5.55,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 2.91317081451416,
+              "disgust": 0.00021670403657481074,
+              "fear": 5.283088207244873,
+              "happy": 0.8399023413658142,
+              "sad": 36.05965805053711,
+              "surprise": 0.06821532547473907,
+              "neutral": 54.83574676513672
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:55:49.716467",
+            "elapsed_seconds": 5.79,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 5.329568862915039,
+              "disgust": 0.0015540884342044592,
+              "fear": 7.527646541595459,
+              "happy": 1.377381682395935,
+              "sad": 11.875273704528809,
+              "surprise": 0.5268917679786682,
+              "neutral": 73.36168670654297
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:55:50.001027",
+            "elapsed_seconds": 6.07,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 3.3357691764831543,
+              "disgust": 0.0007976002525538206,
+              "fear": 5.312182903289795,
+              "happy": 0.7272011637687683,
+              "sad": 38.138736724853516,
+              "surprise": 0.06886979937553406,
+              "neutral": 52.416446685791016
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:55:50.215906",
+            "elapsed_seconds": 6.33,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 1.2908461093902588,
+              "disgust": 6.761301483493298e-05,
+              "fear": 1.679219365119934,
+              "happy": 0.7098333835601807,
+              "sad": 9.415133476257324,
+              "surprise": 0.06545399874448776,
+              "neutral": 86.8394546508789
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:55:50.524569",
+            "elapsed_seconds": 6.65,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 3.9705145359039307,
+              "disgust": 0.001047618454322219,
+              "fear": 1.8807133436203003,
+              "happy": 0.84173583984375,
+              "sad": 8.02669620513916,
+              "surprise": 0.13427381217479706,
+              "neutral": 85.14501190185547
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:55:50.821372",
+            "elapsed_seconds": 6.91,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 1.3070580959320068,
+              "disgust": 3.755260331672616e-05,
+              "fear": 1.7346515655517578,
+              "happy": 0.2038726955652237,
+              "sad": 15.534595489501953,
+              "surprise": 0.03301427140831947,
+              "neutral": 81.18677520751953
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:55:51.116557",
+            "elapsed_seconds": 7.21,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 2.2889058589935303,
+              "disgust": 0.00031936599407345057,
+              "fear": 2.657015085220337,
+              "happy": 0.5002790689468384,
+              "sad": 10.467904090881348,
+              "surprise": 0.17553767561912537,
+              "neutral": 83.9100341796875
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:55:51.355927",
+            "elapsed_seconds": 7.49,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 2.6597235202789307,
+              "disgust": 0.0001247226318810135,
+              "fear": 1.6757241487503052,
+              "happy": 0.5556808710098267,
+              "sad": 6.396527290344238,
+              "surprise": 0.1823633760213852,
+              "neutral": 88.52985382080078
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:55:51.656765",
+            "elapsed_seconds": 7.73,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 1.1057350635528564,
+              "disgust": 3.285466300440021e-05,
+              "fear": 1.5308116674423218,
+              "happy": 0.23694941401481628,
+              "sad": 7.257628917694092,
+              "surprise": 0.06515428423881531,
+              "neutral": 89.8036880493164
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:55:51.876240",
+            "elapsed_seconds": 7.99,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 0.5041255354881287,
+              "disgust": 1.9867557057295926e-06,
+              "fear": 0.29411324858665466,
+              "happy": 0.09360329806804657,
+              "sad": 3.757601261138916,
+              "surprise": 0.02949715405702591,
+              "neutral": 95.32106018066406
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:55:52.185625",
+            "elapsed_seconds": 8.24,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 0.8138957619667053,
+              "disgust": 3.3131891541415825e-06,
+              "fear": 0.34130698442459106,
+              "happy": 0.018204383552074432,
+              "sad": 3.707054376602173,
+              "surprise": 0.021083565428853035,
+              "neutral": 95.09844970703125
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:55:52.441380",
+            "elapsed_seconds": 8.56,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 8.175524711608887,
+              "disgust": 1.3472113096213434e-05,
+              "fear": 1.6524951457977295,
+              "happy": 0.0013402095064520836,
+              "sad": 20.794782638549805,
+              "surprise": 4.988361251889728e-05,
+              "neutral": 69.37579345703125
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:55:52.794300",
+            "elapsed_seconds": 8.83,
+            "dominant_emotion": "angry",
+            "emotion_scores": {
+              "angry": 34.976470947265625,
+              "disgust": 0.0005036551156081259,
+              "fear": 4.8551836013793945,
+              "happy": 0.005022269673645496,
+              "sad": 33.28575897216797,
+              "surprise": 0.0007333172834478319,
+              "neutral": 26.876327514648438
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:55:53.134294",
+            "elapsed_seconds": 9.25,
+            "dominant_emotion": "sad",
+            "emotion_scores": {
+              "angry": 11.017911911010742,
+              "disgust": 0.00015223330410663038,
+              "fear": 17.144948959350586,
+              "happy": 0.013271442614495754,
+              "sad": 46.402957916259766,
+              "surprise": 0.0030436443630605936,
+              "neutral": 25.41770362854004
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:55:53.474817",
+            "elapsed_seconds": 9.5,
+            "dominant_emotion": "sad",
+            "emotion_scores": {
+              "angry": 12.42099380493164,
+              "disgust": 0.005793207790702581,
+              "fear": 8.55109691619873,
+              "happy": 0.05466274917125702,
+              "sad": 60.53313446044922,
+              "surprise": 0.004971614107489586,
+              "neutral": 18.429344177246094
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:55:53.727185",
+            "elapsed_seconds": 9.85,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 2.173279047012329,
+              "disgust": 1.2379666713968618e-06,
+              "fear": 0.2685626447200775,
+              "happy": 0.0008062577689997852,
+              "sad": 11.08481216430664,
+              "surprise": 4.5351331209531054e-05,
+              "neutral": 86.47249603271484
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:55:53.967559",
+            "elapsed_seconds": 10.08,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 2.491964817047119,
+              "disgust": 4.134492701268755e-05,
+              "fear": 1.7320094108581543,
+              "happy": 0.008891710080206394,
+              "sad": 22.540224075317383,
+              "surprise": 0.0011942959390580654,
+              "neutral": 73.22567749023438
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:55:54.236707",
+            "elapsed_seconds": 10.29,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 1.0160859823226929,
+              "disgust": 2.8671533073065802e-05,
+              "fear": 0.18368355929851532,
+              "happy": 0.008118879050016403,
+              "sad": 6.078289985656738,
+              "surprise": 0.0009603586513549089,
+              "neutral": 92.71282958984375
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:55:54.461694",
+            "elapsed_seconds": 10.6,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 1.2416359186172485,
+              "disgust": 1.1158977940795012e-05,
+              "fear": 0.4392433166503906,
+              "happy": 0.006932617165148258,
+              "sad": 6.6712117195129395,
+              "surprise": 0.0010654727229848504,
+              "neutral": 91.63990020751953
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:55:54.735539",
+            "elapsed_seconds": 10.84,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 0.4470987617969513,
+              "disgust": 1.0071716133097652e-05,
+              "fear": 0.12961827218532562,
+              "happy": 0.009193375706672668,
+              "sad": 1.528926134109497,
+              "surprise": 0.0016321480507031083,
+              "neutral": 97.8835220336914
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:55:55.009912",
+            "elapsed_seconds": 11.06,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 0.4483073353767395,
+              "disgust": 2.8168738026579376e-06,
+              "fear": 0.08679966628551483,
+              "happy": 0.010825066827237606,
+              "sad": 1.82599937915802,
+              "surprise": 0.008032525889575481,
+              "neutral": 97.62003326416016
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:55:55.346126",
+            "elapsed_seconds": 11.41,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 0.4190801978111267,
+              "disgust": 1.666887146711815e-05,
+              "fear": 0.36188575625419617,
+              "happy": 0.03329809382557869,
+              "sad": 1.0352591276168823,
+              "surprise": 0.01840800791978836,
+              "neutral": 98.1320571899414
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:55:55.633096",
+            "elapsed_seconds": 11.73,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 1.234467625617981,
+              "disgust": 1.7842315855887136e-06,
+              "fear": 0.3156571090221405,
+              "happy": 0.00959120411425829,
+              "sad": 3.2137527465820312,
+              "surprise": 0.0013981156516820192,
+              "neutral": 95.22512817382812
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:55:55.897066",
+            "elapsed_seconds": 11.98,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 0.752265989780426,
+              "disgust": 4.6290847421914805e-06,
+              "fear": 0.35704511404037476,
+              "happy": 0.007841954007744789,
+              "sad": 3.0144636631011963,
+              "surprise": 0.00028276178636588156,
+              "neutral": 95.86809539794922
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:55:56.128991",
+            "elapsed_seconds": 12.24,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 0.6319693922996521,
+              "disgust": 4.128704676986672e-05,
+              "fear": 0.975203275680542,
+              "happy": 3.1592304706573486,
+              "sad": 12.236970901489258,
+              "surprise": 0.030759822577238083,
+              "neutral": 82.96582794189453
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:55:56.200809",
+            "elapsed_seconds": 12.24,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 0.21760575473308563,
+              "disgust": 1.6066392163338605e-06,
+              "fear": 0.09446518868207932,
+              "happy": 0.007283914368599653,
+              "sad": 1.4168434143066406,
+              "surprise": 0.0001637621462577954,
+              "neutral": 98.26362609863281
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:55:56.494379",
+            "elapsed_seconds": 12.56,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 0.14532257616519928,
+              "disgust": 1.3689944466932502e-07,
+              "fear": 0.023572660982608795,
+              "happy": 0.010428161360323429,
+              "sad": 0.7916738390922546,
+              "surprise": 0.001217095647007227,
+              "neutral": 99.02778625488281
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:55:56.754714",
+            "elapsed_seconds": 12.83,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 0.06278790533542633,
+              "disgust": 9.978844417446453e-09,
+              "fear": 0.01133652776479721,
+              "happy": 0.0018214836018159986,
+              "sad": 0.7162740230560303,
+              "surprise": 0.00011418566282372922,
+              "neutral": 99.2076644897461
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:55:57.011680",
+            "elapsed_seconds": 13.11,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 0.5209282040596008,
+              "disgust": 6.599158041353803e-06,
+              "fear": 0.1843683272600174,
+              "happy": 0.015550236217677593,
+              "sad": 4.257980823516846,
+              "surprise": 0.0012799246469512582,
+              "neutral": 95.01988220214844
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:55:57.262386",
+            "elapsed_seconds": 13.38,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 0.778078556060791,
+              "disgust": 4.0106992855726276e-06,
+              "fear": 0.11908552795648575,
+              "happy": 0.04833727329969406,
+              "sad": 2.8068816661834717,
+              "surprise": 0.017611782997846603,
+              "neutral": 96.2300033569336
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:55:57.570213",
+            "elapsed_seconds": 13.63,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 0.21762952208518982,
+              "disgust": 8.780260145613283e-07,
+              "fear": 0.101869136095047,
+              "happy": 0.021367443725466728,
+              "sad": 2.978992223739624,
+              "surprise": 0.004727218300104141,
+              "neutral": 96.6754150390625
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:55:57.884725",
+            "elapsed_seconds": 13.97,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 0.41499119997024536,
+              "disgust": 3.038032616586861e-07,
+              "fear": 0.1975109875202179,
+              "happy": 0.006148606073111296,
+              "sad": 4.3671464920043945,
+              "surprise": 0.0015202490612864494,
+              "neutral": 95.01268005371094
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:55:58.113911",
+            "elapsed_seconds": 14.24,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 0.7934911847114563,
+              "disgust": 1.5506856243518996e-06,
+              "fear": 0.42809537053108215,
+              "happy": 0.04707830399274826,
+              "sad": 4.555199146270752,
+              "surprise": 0.04061508551239967,
+              "neutral": 94.13551330566406
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:55:58.378581",
+            "elapsed_seconds": 14.48,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 1.0234237909317017,
+              "disgust": 7.459726475644857e-05,
+              "fear": 1.4593276977539062,
+              "happy": 0.04054625332355499,
+              "sad": 4.761992454528809,
+              "surprise": 0.0027183787897229195,
+              "neutral": 92.71192169189453
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:55:58.733501",
+            "elapsed_seconds": 14.86,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 0.16703267395496368,
+              "disgust": 9.694944935745298e-08,
+              "fear": 0.07783372700214386,
+              "happy": 0.006714688614010811,
+              "sad": 2.234802484512329,
+              "surprise": 0.0021756996866315603,
+              "neutral": 97.51144409179688
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:55:59.042395",
+            "elapsed_seconds": 15.15,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 0.2773883044719696,
+              "disgust": 1.7215766945355426e-07,
+              "fear": 0.03376486152410507,
+              "happy": 0.007810624316334724,
+              "sad": 1.0718884468078613,
+              "surprise": 0.0018593072891235352,
+              "neutral": 98.60729217529297
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:55:59.322163",
+            "elapsed_seconds": 15.43,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 0.2917042672634125,
+              "disgust": 3.877157723763958e-06,
+              "fear": 0.2463817298412323,
+              "happy": 0.1061529889702797,
+              "sad": 2.6616733074188232,
+              "surprise": 0.03145155683159828,
+              "neutral": 96.66263580322266
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:55:59.575731",
+            "elapsed_seconds": 15.7,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 0.12921512126922607,
+              "disgust": 2.990937630897861e-08,
+              "fear": 0.07932470738887787,
+              "happy": 0.02195495367050171,
+              "sad": 1.7361959218978882,
+              "surprise": 0.008689023554325104,
+              "neutral": 98.02462005615234
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:55:59.938283",
+            "elapsed_seconds": 16.03,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 0.4356372654438019,
+              "disgust": 9.333905836683698e-06,
+              "fear": 0.635657012462616,
+              "happy": 0.11884389817714691,
+              "sad": 5.051802635192871,
+              "surprise": 0.1181916669011116,
+              "neutral": 93.63986206054688
+            }
+          }
+        ]
+      },
+      "question": {
+        "questionId": "poly3rd_002",
+        "topic": "polynomials",
+        "difficulty": 2,
+        "bloomLevel": "Understand",
+        "type": "multiple-choice",
+        "questionText": "Look at these shapes: \u2b50\u2b50\ud83c\udf19\u2b50\ud83c\udf19\nHow many shapes are there in total?",
+        "options": [
+          "A) 2",
+          "B) 3",
+          "C) 4",
+          "D) 5"
+        ],
+        "correctAnswer": "D) 5",
+        "explanation": "To find the total number of shapes, you need to count all of them, no matter if they are stars (\u2b50) or moons (\ud83c\udf19). There are 3 stars and 2 moons, which makes 3 + 2 = 5 shapes in total."
+      },
+      "student_answer": {
+        "answer": "4",
+        "timestamp": "2025-10-17T16:55:59.692859"
+      },
+      "is_correct": false,
+      "timestamp": "2025-10-17T16:56:00.310512"
+    },
+    {
+      "question_number": 3,
+      "emotion_data_during_answer": {
+        "analysis_duration_seconds": 6.6,
+        "total_frames_analyzed": 25,
+        "start_time": "2025-10-17T16:56:24.972383",
+        "end_time": "2025-10-17T16:56:30.762275",
+        "overall_dominant_emotion": "neutral",
+        "dominant_emotion_percentages": {
+          "neutral": 100.0
+        },
+        "average_emotion_scores": {
+          "neutral": 96.01,
+          "sad": 3.0,
+          "angry": 0.53,
+          "fear": 0.42,
+          "happy": 0.03,
+          "surprise": 0.01,
+          "disgust": 0.0
+        },
+        "stress_level": 1,
+        "detailed_timeline": [
+          {
+            "timestamp": "2025-10-17T16:56:24.972383",
+            "elapsed_seconds": 0.43,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 0.41690793633461,
+              "disgust": 2.074561820109011e-07,
+              "fear": 0.24918976426124573,
+              "happy": 0.010883942246437073,
+              "sad": 1.443953037261963,
+              "surprise": 0.06625794619321823,
+              "neutral": 97.81281280517578
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:56:25.164055",
+            "elapsed_seconds": 0.61,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 0.2847956717014313,
+              "disgust": 8.718494655113318e-07,
+              "fear": 0.18232953548431396,
+              "happy": 0.04798521846532822,
+              "sad": 4.116641521453857,
+              "surprise": 0.06816771626472473,
+              "neutral": 95.30008697509766
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:56:25.282475",
+            "elapsed_seconds": 0.74,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 0.5970845222473145,
+              "disgust": 3.4573906305013224e-05,
+              "fear": 0.27800559997558594,
+              "happy": 0.19600167870521545,
+              "sad": 6.904403209686279,
+              "surprise": 0.10559520125389099,
+              "neutral": 91.91887664794922
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:56:25.420040",
+            "elapsed_seconds": 0.86,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 0.13033202290534973,
+              "disgust": 1.1768166530146118e-07,
+              "fear": 0.03756485506892204,
+              "happy": 0.08693689852952957,
+              "sad": 1.8317433595657349,
+              "surprise": 0.007153000682592392,
+              "neutral": 97.9062728881836
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:56:25.545273",
+            "elapsed_seconds": 0.98,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 0.3085440397262573,
+              "disgust": 6.126494099589763e-06,
+              "fear": 0.1301824301481247,
+              "happy": 0.023579319939017296,
+              "sad": 2.609060049057007,
+              "surprise": 0.0009827931644394994,
+              "neutral": 96.92765045166016
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:56:25.681682",
+            "elapsed_seconds": 1.12,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 0.5717934966087341,
+              "disgust": 5.8593504945747554e-06,
+              "fear": 0.2195664644241333,
+              "happy": 0.008044236339628696,
+              "sad": 2.653271198272705,
+              "surprise": 0.0008274134015664458,
+              "neutral": 96.5464859008789
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:56:25.796747",
+            "elapsed_seconds": 1.24,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 0.5817477703094482,
+              "disgust": 1.2193145266792271e-06,
+              "fear": 0.08014517277479172,
+              "happy": 0.21346266567707062,
+              "sad": 3.194706678390503,
+              "surprise": 0.0058785793371498585,
+              "neutral": 95.92405700683594
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:56:25.938524",
+            "elapsed_seconds": 1.37,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 0.651099443435669,
+              "disgust": 1.5461552038686932e-06,
+              "fear": 0.3563922047615051,
+              "happy": 0.0012355147628113627,
+              "sad": 2.3879237174987793,
+              "surprise": 0.0004521409282460809,
+              "neutral": 96.60289764404297
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:56:26.171904",
+            "elapsed_seconds": 1.57,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 0.13615888357162476,
+              "disgust": 8.198314844776178e-07,
+              "fear": 0.054479051381349564,
+              "happy": 0.011616086587309837,
+              "sad": 2.0629968643188477,
+              "surprise": 0.00037282847915776074,
+              "neutral": 97.734375
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:56:26.550147",
+            "elapsed_seconds": 1.96,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 0.627478301525116,
+              "disgust": 3.2122302400239278e-06,
+              "fear": 0.3727822005748749,
+              "happy": 0.008621403947472572,
+              "sad": 1.8159105777740479,
+              "surprise": 0.002888185903429985,
+              "neutral": 97.17231750488281
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:56:26.849184",
+            "elapsed_seconds": 2.22,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 0.39810067415237427,
+              "disgust": 6.191692136781057e-06,
+              "fear": 0.12291079014539719,
+              "happy": 0.006916167214512825,
+              "sad": 1.6062548160552979,
+              "surprise": 0.00115197931881994,
+              "neutral": 97.86465454101562
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:56:27.094975",
+            "elapsed_seconds": 2.52,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 0.12901900708675385,
+              "disgust": 5.5528630582557525e-08,
+              "fear": 0.018855014815926552,
+              "happy": 0.0031603274401277304,
+              "sad": 0.6163187026977539,
+              "surprise": 0.00010737229604274035,
+              "neutral": 99.2325439453125
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:56:27.395901",
+            "elapsed_seconds": 2.74,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 0.3745138645172119,
+              "disgust": 9.74462523117836e-07,
+              "fear": 0.05157652497291565,
+              "happy": 0.004035314079374075,
+              "sad": 1.2029811143875122,
+              "surprise": 0.0003696334606502205,
+              "neutral": 98.36651611328125
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:56:27.705287",
+            "elapsed_seconds": 3.15,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 0.42728063464164734,
+              "disgust": 9.638898518460337e-06,
+              "fear": 0.0789700299501419,
+              "happy": 0.0656508132815361,
+              "sad": 2.4124789237976074,
+              "surprise": 0.006189424078911543,
+              "neutral": 97.0094223022461
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:56:27.938453",
+            "elapsed_seconds": 3.39,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 0.20219239592552185,
+              "disgust": 2.861864629721822e-07,
+              "fear": 0.04645059257745743,
+              "happy": 0.014613400213420391,
+              "sad": 1.1101185083389282,
+              "surprise": 0.002151843160390854,
+              "neutral": 98.62447357177734
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:56:28.246798",
+            "elapsed_seconds": 3.6,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 0.044855277985334396,
+              "disgust": 1.5481080306578576e-10,
+              "fear": 0.001201154780574143,
+              "happy": 0.00023007405980024487,
+              "sad": 0.27502840757369995,
+              "surprise": 5.539845460589277e-06,
+              "neutral": 99.67868041992188
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:56:28.487813",
+            "elapsed_seconds": 3.93,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 0.43280431628227234,
+              "disgust": 1.7208296299031645e-07,
+              "fear": 0.11383310705423355,
+              "happy": 0.0013102235971018672,
+              "sad": 2.6972153186798096,
+              "surprise": 9.047969069797546e-05,
+              "neutral": 96.7547378540039
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:56:28.758111",
+            "elapsed_seconds": 4.14,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 1.292108178138733,
+              "disgust": 9.644494639360346e-06,
+              "fear": 2.0204873085021973,
+              "happy": 0.03204403817653656,
+              "sad": 7.539280891418457,
+              "surprise": 0.04728879779577255,
+              "neutral": 89.06878662109375
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:56:29.049678",
+            "elapsed_seconds": 4.47,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 2.7021138668060303,
+              "disgust": 0.00013114206376485527,
+              "fear": 4.578311443328857,
+              "happy": 0.00784294307231903,
+              "sad": 13.81380558013916,
+              "surprise": 0.003912530839443207,
+              "neutral": 78.89388275146484
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:56:29.318935",
+            "elapsed_seconds": 4.75,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 0.6929095387458801,
+              "disgust": 1.2152532690379303e-05,
+              "fear": 0.5693148374557495,
+              "happy": 0.015927908942103386,
+              "sad": 3.283043384552002,
+              "surprise": 0.007716298568993807,
+              "neutral": 95.43107604980469
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:56:29.592772",
+            "elapsed_seconds": 4.97,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 0.8814722299575806,
+              "disgust": 1.5676371276640566e-06,
+              "fear": 0.4458654820919037,
+              "happy": 0.004540278576314449,
+              "sad": 3.645157814025879,
+              "surprise": 0.007301100064069033,
+              "neutral": 95.01565551757812
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:56:29.911286",
+            "elapsed_seconds": 5.28,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 0.7424089312553406,
+              "disgust": 9.718427236293792e-07,
+              "fear": 0.2177513688802719,
+              "happy": 0.009565767832100391,
+              "sad": 2.3131589889526367,
+              "surprise": 0.010451756417751312,
+              "neutral": 96.7066650390625
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:56:30.192589",
+            "elapsed_seconds": 5.61,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 0.23371556401252747,
+              "disgust": 2.7546434466785286e-07,
+              "fear": 0.0590786337852478,
+              "happy": 0.009568311274051666,
+              "sad": 1.3319251537322998,
+              "surprise": 0.0012702520471066236,
+              "neutral": 98.36444091796875
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:56:30.451221",
+            "elapsed_seconds": 5.89,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 0.17881515622138977,
+              "disgust": 7.285585468252975e-08,
+              "fear": 0.04482749104499817,
+              "happy": 0.004639959894120693,
+              "sad": 1.0483449697494507,
+              "surprise": 0.0008840799564495683,
+              "neutral": 98.72249603271484
+            }
+          },
+          {
+            "timestamp": "2025-10-17T16:56:30.762275",
+            "elapsed_seconds": 6.2,
+            "dominant_emotion": "neutral",
+            "emotion_scores": {
+              "angry": 0.21644820272922516,
+              "disgust": 4.327037572693371e-07,
+              "fear": 0.1651889681816101,
+              "happy": 0.013600478880107403,
+              "sad": 2.969222068786621,
+              "surprise": 0.005500538740307093,
+              "neutral": 96.63003540039062
+            }
+          }
+        ]
+      },
+      "question": {
+        "questionId": "poly3rd_003",
+        "topic": "polynomials",
+        "difficulty": 2,
+        "bloomLevel": "Understand",
+        "type": "multiple-choice",
+        "questionText": "Look at this collection of school supplies: \u270f\ufe0f \ud83d\udcda \u270f\ufe0f \ud83d\udcda \u270f\ufe0f \nHow many \u270f\ufe0f (pencils) are there in total?",
+        "options": [
+          "A) 2",
+          "B) 3",
+          "C) 4",
+          "D) 5"
+        ],
+        "correctAnswer": "B) 3",
+        "explanation": "To find the total number of pencils (\u270f\ufe0f), you only need to count the pencil symbols. There are three \u270f\ufe0f symbols in the collection. The \ud83d\udcda symbols are books, which are different and should not be counted if you are only looking for pencils."
+      },
+      "student_answer": {
+        "answer": "3",
+        "timestamp": "2025-10-17T16:56:30.487715"
+      },
+      "is_correct": true,
+      "timestamp": "2025-10-17T16:56:31.127982"
+    }
+  ],
+  "end_time": "2025-10-17T16:56:31.127982",
+  "total_questions": 3,
+  "correct_answers": 2,
+  "score_percentage": 66.67
+}

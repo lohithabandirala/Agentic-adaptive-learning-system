@@ -1,0 +1,25 @@
+{
+  "name": "ai-service",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Adaptive assessment AI service using Google Gemini",
+  "main": "questionGenerator.js",
+  "scripts": {
+    "start": "node api.js",
+    "dev": "node api.js",
+    "example": "node example.js",
+    "example:1": "node example.js 1",
+    "example:2": "node example.js 2",
+    "example:3": "node example.js 3",
+    "example:4": "node example.js 4",
+    "test": "node test.js",
+    "test:simple": "node test.js"
+  },
+  "dependencies": {
+    "@google/genai": "^1.25.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.2",
+    "multer": "^1.4.5-lts.1"
+  }
+}
