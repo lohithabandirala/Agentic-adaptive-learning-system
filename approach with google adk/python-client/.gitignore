@@ -1,0 +1,13 @@
+node_modules/
+.env
+.env.adk
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+*.log
+scenic-shift-473208-u2-61802cf35017.json
+.vscode/
+*.swp
+*.swo
+.idea/
