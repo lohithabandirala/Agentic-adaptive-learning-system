@@ -22,11 +22,13 @@ yarn-error.log*
 .env
 .env.local
 .env.*.local
+.env.adk
 
 # Google Cloud Credentials (NEVER COMMIT THESE!)
 scenic-shift-*.json
 *-credentials.json
 service-account*.json
+inlaid-plasma-*.json
 
 # MongoDB
 *.db
@@ -54,3 +56,6 @@ emotion_*.json
 # TensorFlow
 *.h5
 *.pb
+
+# Embedded repositories
+Facial-Emotion-Recognition-using-OpenCV-and-Deepface/

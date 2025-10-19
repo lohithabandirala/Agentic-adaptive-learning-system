@@ -337,7 +337,8 @@ router.post('/start-session', authenticateToken, async (req: AuthRequest, res) =
       topic: test.topic,
       count: questionsPerSession,
       studentId,
-      attemptId
+      attemptId,
+      session: 1
     });
     
     // If Full ADK fails (quota/errors), fallback to simple ADK
@@ -474,7 +475,8 @@ router.post('/submit-session', authenticateToken, async (req: AuthRequest, res) 
       emotions: { averageStress: avgEmotionStress, dominantEmotion: dominantEmotions[0] },
       topic: test.topic,
       studentId: attempt.studentId,
-      attemptId: attempt.attemptId
+      attemptId: attempt.attemptId,
+      session: attempt.currentSession
     });
     
     if (adkAnalysis.success && adkAnalysis.analysis) {
@@ -516,6 +518,21 @@ router.post('/submit-session', authenticateToken, async (req: AuthRequest, res) 
       
       console.log(`✅ TEST COMPLETE: ${attempt.results.length} questions answered`);
       
+      // Update StudentAnalytics
+      try {
+        const { StudentAnalytics } = await import('../db/models');
+        let analytics = await StudentAnalytics.findOne({ studentId: attempt.studentId });
+        
+        if (!analytics) {
+          analytics = new StudentAnalytics({ studentId: attempt.studentId });
+        }
+        
+        await analytics.updateFromAttempt(attempt, test);
+        console.log(`📊 Updated StudentAnalytics for ${attempt.studentId}`);
+      } catch (analyticsError: any) {
+        console.error('⚠️ Failed to update StudentAnalytics:', analyticsError.message);
+      }
+      
       return res.json({ 
         done: true,
         sessionAnalysis,
@@ -542,7 +559,8 @@ router.post('/submit-session', authenticateToken, async (req: AuthRequest, res) 
       topic: test.topic,
       count: nextBatchSize,
       studentId: attempt.studentId,
-      attemptId: attempt.attemptId
+      attemptId: attempt.attemptId,
+      session: attempt.currentSession + 1
     });
     
     let nextQuestions: any[] = [];

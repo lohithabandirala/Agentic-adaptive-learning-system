@@ -17,6 +17,8 @@ import testRoutes from './routes/tests';
 import adminRoutes from './routes/admin';
 import classRoutes from './routes/classes';
 import emotionRoutes from './routes/emotions';
+import analyticsRoutes from './routes/analytics';
+import profileRoutes from './routes/profile';
 
 const app = express();
 app.use(cors());
@@ -32,6 +34,8 @@ app.use('/api/tests', testRoutes);
 app.use('/api/admin', adminRoutes);
 app.use('/api/classes', classRoutes);
 app.use('/api/emotions', emotionRoutes);
+app.use('/api/analytics', analyticsRoutes);
+app.use('/api/profile', profileRoutes);
 
 const port = process.env.PORT || 4000;
 

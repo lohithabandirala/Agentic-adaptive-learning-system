@@ -1,16 +1,48 @@
 // Google ADK Agent for Question Generation and Analysis
-// FULL INTEGRATION: Database querying, emotion analysis, function calling
+// FULL INTEGRATION: Database querying, emotion analysis, function calling, AI analytics
+// Using Vertex AI with Service Account for higher quota
 
-import { GoogleGenerativeAI } from '@google/generative-ai';
-import { User, Attempt, EmotionTracking } from '../db/models';
+import { VertexAI } from '@google-cloud/vertexai';
+import { User, Attempt, EmotionTracking, AIAnalysis, IToolCall } from '../db/models';
+import { generateFallbackQuestions, generateFallbackAnalysis } from './fallbackQuestions';
 
-const apiKey = process.env.GOOGLE_API_KEY || 'dummy-key';
-if (apiKey === 'dummy-key') {
-  console.warn('⚠️ No API key found for ADK Agent. Set GOOGLE_API_KEY in .env');
+// Initialize Vertex AI with service account
+const project = process.env.GOOGLE_CLOUD_PROJECT || 'scenic-shift-473208-u2';
+const location = 'us-central1';
+
+// Service account credentials are loaded from GOOGLE_APPLICATION_CREDENTIALS env var
+const vertexAI = new VertexAI({ 
+  project: project, 
+  location: location 
+});
+
+const model = 'gemini-2.0-flash-exp'; // Supports function calling
+
+console.log(`🔧 Vertex AI initialized with project: ${project}, location: ${location}`);
+
+// Quota tracking
+let apiCallsToday = 0;
+let lastResetDate = new Date().toDateString();
+const DAILY_QUOTA_LIMIT = 45; // Leave some buffer from 50 limit
+
+function checkAndResetQuota() {
+  const today = new Date().toDateString();
+  if (today !== lastResetDate) {
+    apiCallsToday = 0;
+    lastResetDate = today;
+    console.log('🔄 API quota reset for new day');
+  }
 }
 
-const genAI = new GoogleGenerativeAI(apiKey);
-const model = 'gemini-2.0-flash-exp'; // Supports function calling
+function canMakeAPICall(): boolean {
+  checkAndResetQuota();
+  return apiCallsToday < DAILY_QUOTA_LIMIT;
+}
+
+function incrementAPICall() {
+  apiCallsToday++;
+  console.log(`📊 API calls today: ${apiCallsToday}/${DAILY_QUOTA_LIMIT}`);
+}
 
 // ============================================
 // AGENT TOOLS - FUNCTION DECLARATIONS
@@ -158,10 +190,17 @@ async function queryEmotionPatterns(studentId: string, attemptId?: string) {
 
     if (emotionRecords.length === 0) {
       return {
-        message: 'No emotion data available',
-        averageStressLevel: 0,
+        success: true, // Important: This is not an error, just no data yet
+        message: 'No emotion data available yet - this is normal for new attempts',
+        studentId,
+        attemptId,
+        recordsAnalyzed: 0,
+        averageStressLevel: '0.00',
         emotionalStability: 'unknown',
-        dominantEmotions: []
+        dominantEmotions: [],
+        emotionDistribution: {},
+        recentEmotions: [],
+        recommendation: 'No emotion data - using standard difficulty'
       };
     }
 
@@ -282,14 +321,49 @@ export async function generateQuestionsWithFullADK(params: {
   count: number;
   studentId: string;
   attemptId?: string;
-}): Promise<{ success: boolean; questions?: any[]; reasoning?: string; error?: string }> {
+  session?: number;
+}): Promise<{ success: boolean; questions?: any[]; reasoning?: string; error?: string; usedFallback?: boolean }> {
+  const startTime = Date.now();
+  const toolCallsUsed: IToolCall[] = [];
+  let analysisId: any = null;
+  
   try {
-    const { topic, count, studentId, attemptId } = params;
+    const { topic, count, studentId, attemptId, session = 0 } = params;
 
     console.log(`\n🤖 FULL ADK AGENT: Generating ${count} questions`);
     console.log(`   Topic: ${topic}, Student: ${studentId}`);
 
-    const generativeModel = genAI.getGenerativeModel({
+    // Check quota before making API call
+    if (!canMakeAPICall()) {
+      console.log('⚠️ API quota exceeded, using fallback question generator');
+      const fallbackQuestions = generateFallbackQuestions({ topic, count, difficulty: 'medium' });
+      
+      // Save fallback analysis
+      const analysis = new AIAnalysis({
+        attemptId: attemptId || `session_${Date.now()}`,
+        studentId,
+        questionCount: count,
+        usedFallback: true,
+        reasoning: 'API quota exceeded - used template-based questions',
+        toolCalls: [],
+        totalIterations: 0,
+        processingTime: Date.now() - startTime,
+        modelUsed: 'fallback-templates',
+        success: true
+      });
+      await analysis.save();
+
+      return {
+        success: true,
+        questions: fallbackQuestions,
+        reasoning: 'Using fallback templates due to API quota limit',
+        usedFallback: true
+      };
+    }
+
+    incrementAPICall();
+
+    const generativeModel = vertexAI.getGenerativeModel({
       model: model,
       tools: [{ functionDeclarations: agentTools }],
       generationConfig: {
@@ -388,6 +462,30 @@ Start by calling the query tools to gather student insights!`;
         
         if (questions && questions.length === count) {
           console.log(`✅ Generated ${questions.length} personalized questions using ${iterations} iterations`);
+          
+          // Save AI Analysis to database
+          const processingTime = Date.now() - startTime;
+          try {
+            analysisId = await AIAnalysis.create({
+              attemptId: attemptId || 'unknown',
+              studentId,
+              session,
+              analysisType: 'question_generation',
+              prompt: initialPrompt,
+              inputData: { topic, numQuestions: count },
+              aiModel: model,
+              toolCallsUsed,
+              iterations,
+              response: agentReasoning,
+              questionsGenerated: questions.length,
+              processingTimeMs: processingTime,
+              success: true
+            });
+            console.log(`💾 AI Analysis saved: ${analysisId._id}`);
+          } catch (saveError: any) {
+            console.error('⚠️ Failed to save AI analysis:', saveError.message);
+          }
+          
           return { success: true, questions, reasoning: agentReasoning };
         } else {
           console.log(`⚠️ Expected ${count} questions, got ${questions?.length || 0}`);
@@ -400,6 +498,73 @@ Start by calling the query tools to gather student insights!`;
 
   } catch (error: any) {
     console.error('❌ Full ADK Agent Error:', error.message);
+    
+    // Check if it's a quota error
+    const isQuotaError = error.message?.includes('quota') || error.message?.includes('429') || error.message?.includes('Too Many Requests');
+    
+    if (isQuotaError) {
+      console.log('⚠️ Quota exceeded, using fallback question generator');
+      const fallbackQuestions = generateFallbackQuestions({ 
+        topic: params.topic, 
+        count: params.count, 
+        difficulty: 'medium' 
+      });
+      
+      // Save fallback analysis
+      const processingTime = Date.now() - startTime;
+      try {
+        await AIAnalysis.create({
+          attemptId: params.attemptId || 'unknown',
+          studentId: params.studentId,
+          session: params.session || 0,
+          analysisType: 'question_generation',
+          prompt: `Generate ${params.count} questions on ${params.topic}`,
+          inputData: { topic: params.topic, numQuestions: params.count },
+          aiModel: 'fallback-templates',
+          toolCallsUsed,
+          iterations: 0,
+          response: 'Quota exceeded - used fallback templates',
+          questionsGenerated: fallbackQuestions.length,
+          processingTimeMs: processingTime,
+          success: true,
+          error: error.message
+        });
+        console.log('💾 Fallback Analysis saved');
+      } catch (saveError: any) {
+        console.error('⚠️ Failed to save fallback analysis:', saveError.message);
+      }
+      
+      return {
+        success: true,
+        questions: fallbackQuestions,
+        reasoning: 'API quota exceeded - using template-based questions',
+        usedFallback: true
+      };
+    }
+    
+    // Save failed analysis for non-quota errors
+    const processingTime = Date.now() - startTime;
+    try {
+      await AIAnalysis.create({
+        attemptId: params.attemptId || 'unknown',
+        studentId: params.studentId,
+        session: params.session || 0,
+        analysisType: 'question_generation',
+        prompt: `Generate ${params.count} questions on ${params.topic}`,
+        inputData: { topic: params.topic, numQuestions: params.count },
+        aiModel: model,
+        toolCallsUsed,
+        iterations: 0,
+        response: error.message,
+        processingTimeMs: processingTime,
+        success: false,
+        error: error.message
+      });
+      console.log('💾 Failed AI Analysis saved for debugging');
+    } catch (saveError: any) {
+      console.error('⚠️ Failed to save error analysis:', saveError.message);
+    }
+    
     return {
       success: false,
       error: error.message
@@ -417,9 +582,13 @@ export async function analyzeSessionWithFullADK(params: {
   topic: string;
   studentId: string;
   attemptId: string;
-}): Promise<{ success: boolean; analysis?: any; reasoning?: string; error?: string }> {
+  session?: number;
+}): Promise<{ success: boolean; analysis?: any; reasoning?: string; error?: string; usedFallback?: boolean }> {
+  const startTime = Date.now();
+  const toolCallsUsed: IToolCall[] = [];
+  
   try {
-    const { sessionAnswers, emotions, topic, studentId, attemptId } = params;
+    const { sessionAnswers, emotions, topic, studentId, attemptId, session = 0 } = params;
 
     console.log(`\n🤖 FULL ADK AGENT: Analyzing session performance`);
     console.log(`   Student: ${studentId}, Questions: ${sessionAnswers.length}`);
@@ -427,7 +596,34 @@ export async function analyzeSessionWithFullADK(params: {
     const correctCount = sessionAnswers.filter(a => a.isCorrect).length;
     const accuracy = (correctCount / sessionAnswers.length) * 100;
 
-    const generativeModel = genAI.getGenerativeModel({
+    // Check quota before making API call
+    if (!canMakeAPICall()) {
+      console.log('⚠️ API quota exceeded, using fallback analysis');
+      const avgStress = sessionAnswers.reduce((sum: number, a: any) => sum + (a.stress || 0), 0) / sessionAnswers.length;
+      const avgTime = sessionAnswers.reduce((sum: number, a: any) => sum + (a.timeTaken || 30), 0) / sessionAnswers.length;
+      
+      const fallbackAnalysis = generateFallbackAnalysis({
+        accuracy: accuracy / 100,
+        avgStress,
+        avgTime,
+        difficulty: 'medium'
+      });
+
+      return {
+        success: true,
+        analysis: {
+          overallAssessment: fallbackAnalysis,
+          recommendation: fallbackAnalysis,
+          nextDifficulty: accuracy >= 80 ? 'hard' : accuracy >= 60 ? 'medium' : 'easy'
+        },
+        reasoning: 'Used fallback analysis due to API quota',
+        usedFallback: true
+      };
+    }
+
+    incrementAPICall();
+
+    const generativeModel = vertexAI.getGenerativeModel({
       model: model,
       tools: [{ functionDeclarations: agentTools }],
       generationConfig: {
@@ -528,6 +724,35 @@ Start by querying student data!`;
 
         if (analysis) {
           console.log(`✅ Analysis: ${analysis.overallAssessment}`);
+          
+          // Save AI Analysis to database
+          const processingTime = Date.now() - startTime;
+          try {
+            await AIAnalysis.create({
+              attemptId,
+              studentId,
+              session,
+              analysisType: 'session_analysis',
+              prompt: prompt.substring(0, 1000), // Truncate long prompts
+              inputData: { 
+                topic, 
+                sessionAnswers: sessionAnswers.map(a => ({ isCorrect: a.isCorrect, difficulty: a.difficulty })),
+                emotions 
+              },
+              aiModel: model,
+              toolCallsUsed,
+              iterations,
+              response: agentReasoning,
+              recommendation: analysis.recommendation,
+              nextDifficulty: analysis.nextDifficulty,
+              processingTimeMs: processingTime,
+              success: true
+            });
+            console.log('💾 Session Analysis saved to database');
+          } catch (saveError: any) {
+            console.error('⚠️ Failed to save session analysis:', saveError.message);
+          }
+          
           return { success: true, analysis, reasoning: agentReasoning };
         } else {
           throw new Error('Failed to parse analysis response');
@@ -539,6 +764,84 @@ Start by querying student data!`;
 
   } catch (error: any) {
     console.error('❌ Full ADK Analysis Error:', error.message);
+    
+    // Check if it's a quota error
+    const isQuotaError = error.message?.includes('quota') || error.message?.includes('429') || error.message?.includes('Too Many Requests');
+    
+    if (isQuotaError) {
+      console.log('⚠️ Quota exceeded, using fallback analysis');
+      const avgStress = params.sessionAnswers.reduce((sum: number, a: any) => sum + (a.stress || 0), 0) / params.sessionAnswers.length;
+      const avgTime = params.sessionAnswers.reduce((sum: number, a: any) => sum + (a.timeTaken || 30), 0) / params.sessionAnswers.length;
+      const correctCount = params.sessionAnswers.filter(a => a.isCorrect).length;
+      const accuracy = (correctCount / params.sessionAnswers.length);
+      
+      const fallbackAnalysis = generateFallbackAnalysis({
+        accuracy,
+        avgStress,
+        avgTime,
+        difficulty: 'medium'
+      });
+
+      // Save fallback analysis
+      const processingTime = Date.now() - startTime;
+      try {
+        await AIAnalysis.create({
+          attemptId: params.attemptId,
+          studentId: params.studentId,
+          session: params.session || 0,
+          analysisType: 'session_analysis',
+          prompt: `Analyze session on ${params.topic}`,
+          inputData: { topic: params.topic, questionsCount: params.sessionAnswers.length },
+          aiModel: 'fallback-rules',
+          toolCallsUsed,
+          iterations: 0,
+          response: fallbackAnalysis,
+          recommendation: fallbackAnalysis,
+          nextDifficulty: accuracy >= 0.8 ? 'hard' : accuracy >= 0.6 ? 'medium' : 'easy',
+          processingTimeMs: processingTime,
+          success: true,
+          error: error.message
+        });
+        console.log('💾 Fallback Analysis saved');
+      } catch (saveError: any) {
+        console.error('⚠️ Failed to save fallback analysis:', saveError.message);
+      }
+
+      return {
+        success: true,
+        analysis: {
+          overallAssessment: fallbackAnalysis,
+          recommendation: fallbackAnalysis,
+          nextDifficulty: accuracy >= 0.8 ? 'hard' : accuracy >= 0.6 ? 'medium' : 'easy'
+        },
+        reasoning: 'Used fallback analysis due to API quota',
+        usedFallback: true
+      };
+    }
+    
+    // Save failed analysis for non-quota errors
+    const processingTime = Date.now() - startTime;
+    try {
+      await AIAnalysis.create({
+        attemptId: params.attemptId,
+        studentId: params.studentId,
+        session: params.session || 0,
+        analysisType: 'session_analysis',
+        prompt: `Analyze session on ${params.topic}`,
+        inputData: { topic: params.topic, questionsCount: params.sessionAnswers.length },
+        aiModel: model,
+        toolCallsUsed,
+        iterations: 0,
+        response: error.message,
+        processingTimeMs: processingTime,
+        success: false,
+        error: error.message
+      });
+      console.log('💾 Failed Analysis saved for debugging');
+    } catch (saveError: any) {
+      console.error('⚠️ Failed to save error analysis:', saveError.message);
+    }
+    
     return {
       success: false,
       error: error.message
@@ -561,7 +864,7 @@ export async function generateQuestionsWithADK(params: {
 
     console.log(`\n🤖 Simple ADK: Generating ${count} questions on "${topic}"`);
 
-    const generativeModel = genAI.getGenerativeModel({
+    const generativeModel = vertexAI.getGenerativeModel({
       model: model,
       generationConfig: {
         temperature: 0.7,
@@ -611,7 +914,7 @@ export async function analyzeSessionWithADK(params: {
     const correctCount = sessionAnswers.filter(a => a.isCorrect).length;
     const accuracy = (correctCount / sessionAnswers.length) * 100;
 
-    const generativeModel = genAI.getGenerativeModel({
+    const generativeModel = vertexAI.getGenerativeModel({
       model: model,
       generationConfig: {
         temperature: 0.6,
@@ -702,7 +1005,7 @@ export async function generateQuestionsWithADK(params: {
     console.log(`\n🤖 ADK Agent: Generating ${count} questions on "${topic}"`);
     console.log(`   Difficulty: ${difficulty}, Student Level: ${studentLevel}/5`);
 
-    const generativeModel = genAI.getGenerativeModel({
+    const generativeModel = vertexAI.getGenerativeModel({
       model: model,
       generationConfig: {
         temperature: 0.7,
@@ -775,7 +1078,7 @@ export async function analyzeSessionWithADK(params: {
     const correctCount = sessionAnswers.filter(a => a.isCorrect).length;
     const accuracy = (correctCount / sessionAnswers.length) * 100;
 
-    const generativeModel = genAI.getGenerativeModel({
+    const generativeModel = vertexAI.getGenerativeModel({
       model: model,
       generationConfig: {
         temperature: 0.6,

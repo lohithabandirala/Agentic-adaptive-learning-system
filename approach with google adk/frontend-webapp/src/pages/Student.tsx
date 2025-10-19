@@ -258,10 +258,32 @@ export default function Student() {
     loadTests();
   }
 
+  function backToDashboard() {
+    // Reset all test state
+    setShowResults(false);
+    setInsights(null);
+    setAllAnswers([]);
+    setSessionAnalysis(null);
+    setActiveTest(null);
+    setSessionQuestions([]);
+    setSessionAnswers(new Map());
+    setQuestionsAnswered(0);
+    setSessionNumber(0);
+    setTotalSessions(0);
+    setAttemptId(null);
+    setEmotionSnapshots([]);
+    setTotalQuestions(0);
+    setTimer(30);
+    setIsSubmitting(false);
+    // Reload tests
+    loadTests();
+  }
+
   if (showResults && insights) {
+    // Convert stress from 1-10 scale to 0-100% for display
     const chartData = allAnswers.map((a: any, i: number) => ({
       question: i + 1,
-      stress: (a.stress * 10).toFixed(0),
+      stress: Number((a.stress * 10).toFixed(0)), // 1-10 -> 10-100%
       time: a.timeTaken,
     }));
 
@@ -299,7 +321,7 @@ export default function Student() {
             <div className="card text-center">
               <p className="text-sm text-gray-600">Avg Stress Level</p>
               <p className="text-4xl font-bold text-orange-600 mt-2">
-                {(insights.avgStress * 100).toFixed(0)}%
+                {(insights.avgStress * 10).toFixed(0)}%
               </p>
             </div>
             <div className="card text-center">
@@ -323,7 +345,7 @@ export default function Student() {
 
           <div className="flex gap-4">
             <button onClick={retakeTest} className="btn-primary flex-1">Retake Similar Test</button>
-            <button onClick={() => navigate('/student')} className="btn-secondary flex-1">Back to Dashboard</button>
+            <button onClick={backToDashboard} className="btn-secondary flex-1">Back to Dashboard</button>
           </div>
         </div>
       </div>
@@ -486,6 +508,8 @@ export default function Student() {
         {/* Emotion Tracker - Fixed position in bottom right */}
         <EmotionTracker 
           isActive={true}
+          attemptId={attemptId || undefined}
+          studentId={localStorage.getItem('userId') || undefined}
           onEmotionDetected={handleEmotionDetected}
         />
       </div>
@@ -508,7 +532,15 @@ export default function Student() {
                 <p className="text-sm text-gray-500">Take adaptive tests</p>
               </div>
             </div>
-            <button onClick={logout} className="btn-secondary">Logout</button>
+            <div className="flex items-center gap-3">
+              <button 
+                onClick={() => navigate('/student/profile')} 
+                className="px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition font-medium"
+              >
+                📊 My Profile
+              </button>
+              <button onClick={logout} className="btn-secondary">Logout</button>
+            </div>
           </div>
         </div>
       </nav>

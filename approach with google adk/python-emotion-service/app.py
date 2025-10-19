@@ -83,6 +83,7 @@ def detect_emotion():
         dominant_emotion = result.get('dominant_emotion', 'neutral')
         
         # Calculate stress level (0-1 scale)
+        # DeepFace returns emotion values as percentages (0-100)
         # High stress emotions: angry, fear, sad
         # Low stress emotions: happy, surprise, neutral
         stress_emotions = ['angry', 'fear', 'sad']
@@ -92,8 +93,15 @@ def detect_emotion():
         calm_score = sum(emotions.get(e, 0) for e in calm_emotions)
         
         # Normalize stress level (0-1)
+        # DeepFace already returns 0-100, so divide by 100 to get 0-1
         total = stress_score + calm_score
-        stress_level = stress_score / total if total > 0 else 0.0
+        if total > 0:
+            stress_level = (stress_score / total)
+            # Ensure it's in 0-1 range (DeepFace percentages sum to 100)
+            if stress_level > 1.0:
+                stress_level = stress_level / 100.0
+        else:
+            stress_level = 0.0
         
         logger.info(f"Emotion detected: {dominant_emotion}, Stress: {stress_level:.2f}")
         
